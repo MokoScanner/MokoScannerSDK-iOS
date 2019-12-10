@@ -1,0 +1,1 @@
+../../../../../MKScannerSDK/Classes/MKSDKForBLE/MKBLETaskOperationID.h

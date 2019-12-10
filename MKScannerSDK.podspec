@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKScannerSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of MKScannerSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -21,22 +21,22 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/aadyx2007@163.com/MKScannerSDK'
+  s.homepage         = 'https://github.com/MokoScanner/MokoScanner_iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'aadyx2007@163.com' => 'chengang@mokotechnology.com' }
-  s.source           = { :git => 'https://github.com/aadyx2007@163.com/MKScannerSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/MokoScanner/MokoScannerSDK-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'MKScannerSDK/Classes/**/*'
+  s.subspec 'MKSDKForBLE' do |ss|
+    ss.source_files = 'MKScannerSDK/Classes/MKSDKForBLE/**'
+  end
   
-  # s.resource_bundles = {
-  #   'MKScannerSDK' => ['MKScannerSDK/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'MKSDKForMqttServer' do |ss|
+    ss.source_files = 'MKScannerSDK/Classes/MKSDKForMqttServer/**'
+    ss.dependency 'MQTTClient','0.14.0'
+  end
+  
 end

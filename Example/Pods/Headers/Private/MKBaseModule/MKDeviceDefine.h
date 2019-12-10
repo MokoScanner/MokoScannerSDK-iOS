@@ -1,0 +1,1 @@
+../../../MKBaseModule/MKBaseModule/macroDefines/MKDeviceDefine.h

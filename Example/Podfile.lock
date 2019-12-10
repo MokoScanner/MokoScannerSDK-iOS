@@ -1,0 +1,362 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
+  - CircleProgressBar (0.32)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - IMYWebView (0.8.1)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.2.2)
+  - MKBaseModule (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/base (= 0.2.1)
+    - MKBaseModule/category (= 0.2.1)
+    - MKBaseModule/customUI (= 0.2.1)
+    - MKBaseModule/macroDefines (= 0.2.1)
+    - MKBaseModule/tools (= 0.2.1)
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/base (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/base/controller (= 0.2.1)
+    - MKBaseModule/base/view (= 0.2.1)
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/base/controller (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/base/view/WRNavigationBar
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/base/view (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/base/view/collectionView (= 0.2.1)
+    - MKBaseModule/base/view/tableView (= 0.2.1)
+    - MKBaseModule/base/view/WRNavigationBar (= 0.2.1)
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/base/view/collectionView (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/base/view/tableView (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/base/view/WRNavigationBar (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/category (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/customUI/HaveRefreshView (= 0.2.1)
+    - MKBaseModule/customUI/MKHexKeyBoard (= 0.2.1)
+    - MKBaseModule/customUI/MKHudManager (= 0.2.1)
+    - MKBaseModule/customUI/MKPageControl (= 0.2.1)
+    - MKBaseModule/customUI/MKProgressView (= 0.2.1)
+    - MKBaseModule/customUI/MKTimePicker (= 0.2.1)
+    - MKBaseModule/customUI/MKWebViewController (= 0.2.1)
+    - MKBaseModule/customUI/NirKxMenu (= 0.2.1)
+    - MKBaseModule/customUI/XDRefresh (= 0.2.1)
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/HaveRefreshView (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/MKHexKeyBoard (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/MKHudManager (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/MKPageControl (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/MKProgressView (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/MKTimePicker (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/macroDefines
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/MKWebViewController (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/category
+    - MKBaseModule/customUI/MKHudManager
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/NirKxMenu (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/customUI/XDRefresh (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/macroDefines (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/tools (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule/tools/MKAttributedString (= 0.2.1)
+    - MKBaseModule/tools/MKDateFormatter (= 0.2.1)
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/tools/MKAttributedString (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKBaseModule/tools/MKDateFormatter (0.2.1):
+    - Aspects
+    - CircleProgressBar
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MLInputDodger
+    - Toast
+    - YYKit
+  - MKScannerSDK (0.1.0):
+    - MKScannerSDK/MKSDKForBLE (= 0.1.0)
+    - MKScannerSDK/MKSDKForMqttServer (= 0.1.0)
+  - MKScannerSDK/MKSDKForBLE (0.1.0)
+  - MKScannerSDK/MKSDKForMqttServer (0.1.0):
+    - MQTTClient (= 0.14.0)
+  - MLInputDodger (1.5.2)
+  - MQTTClient (0.14.0):
+    - MQTTClient/Core (= 0.14.0)
+  - MQTTClient/Core (0.14.0):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.14.0):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.14.0)
+  - Toast (4.0.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking
+  - FLAnimatedImage
+  - FMDB
+  - MKBaseModule
+  - MKScannerSDK (from `../`)
+  - MLInputDodger
+  - MQTTClient (= 0.14.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - MLInputDodger
+  trunk:
+    - Aspects
+    - CircleProgressBar
+    - FLAnimatedImage
+    - FMDB
+    - IMYWebView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - MKBaseModule
+    - MQTTClient
+    - Toast
+    - YYKit
+
+EXTERNAL SOURCES:
+  MKScannerSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CircleProgressBar: 3920079be5224b62b3d9ed6eeb23ac01c835b681
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IMYWebView: a6a9a52718ba6a44fb927d65f6d60930a8218cea
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 72a46ecaa2a0feaf48fc5198dff95f25f8bb27c6
+  MKBaseModule: c8d26fec7db93896662a92a47a6ce39dbb9bff22
+  MKScannerSDK: 27d1f23f3a332805815aba95d1f3989615b6f34b
+  MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
+  MQTTClient: eea2eaaa6ddef852a1019a4dda091e22ad928b58
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 7fb9faac8f21fde7a8501265abca746b5ced0f8c
+
+COCOAPODS: 1.8.3
