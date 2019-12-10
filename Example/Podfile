@@ -9,12 +9,11 @@ post_install do |installer|
 end
 
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://cdn.cocoapods.org/'
 
 platform :ios,'9.0'
 inhibit_all_warnings!
 
-target 'MKScannerSDK_Example' dosudo gem install -n /usr/local/bin cocoapods
+target 'MKScannerSDK_Example' do
   
 pod 'MKScannerSDK', :path => '../'
 
