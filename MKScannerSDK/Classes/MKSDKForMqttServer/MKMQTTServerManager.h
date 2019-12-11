@@ -17,8 +17,7 @@ typedef NS_ENUM(NSInteger, MKMQTTSessionManagerState) {
     MKMQTTSessionManagerStateClosed
 };
 
-@class MQTTSSLSecurityPolicy;
-@class MKMQTTServerManager;
+@class MQTTSSLSecurityPolicy, MKMQTTServerManager;
 @protocol MKMQTTServerManagerDelegate <NSObject>
 
 - (void)mqttServerManagerStateChanged:(MKMQTTSessionManagerState)state;

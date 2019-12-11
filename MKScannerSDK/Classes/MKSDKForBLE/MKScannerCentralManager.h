@@ -66,10 +66,8 @@ extern NSString *const mk_centralManagerStateChangedNotification;
 
 @end
 
-@class CBPeripheral;
-@class CBCentralManager;
-@class CBCharacteristic;
-@class MKBLETaskOperation;
+@class CBPeripheral, CBCentralManager, CBCharacteristic, MKBLETaskOperation;
+
 @interface MKScannerCentralManager : NSObject
 
 /// centralManager

@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/MokoScanner/MokoScanner_iOS'
+  s.homepage         = 'https://github.com/MokoScanner/MokoScannerSDK-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'aadyx2007@163.com' => 'chengang@mokotechnology.com' }
