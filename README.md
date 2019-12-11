@@ -1,7 +1,7 @@
 # MokoScannerSDK-iOS
-1、SDK集成
+## 1、SDK集成
 pod install MKScannerSDK.podspec
-2、SDK简介
+## 2、SDK简介
 
 蓝牙部分
 app与设备之间通过蓝牙通信，主要用于配置设备的mqtt服务器、wifi等信息，使用的时候，在.pch文件里面引入MKScannerBLESDK.h即可.
