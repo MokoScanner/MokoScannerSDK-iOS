@@ -1,20 +1,20 @@
-# MokoScannerSDK-iOS
-## 1、SDK集成
-pod install MKScannerSDK.podspec
-## 2、SDK简介
+## Installation
+1、Add pod 'MKScannerSDK' to your Podfile.
+2、Run pod install or pod update.
+3、Import <MKScannerSDK/MKScannerBLESDK.h> and Import <MKScannerSDK/MKMQTTServerManager.h>
 
-#### 2.1蓝牙部分
-   app与设备之间通过蓝牙通信，主要用于配置设备的mqtt服务器、wifi等信息，使用的时候，在.pch文件里面引入MKScannerBLESDK.h即可.MKScannerCentralManager用来扫描设备，以及连接设备用来配置信息，MKBLESDKInterface用来配置具体的mqtt服务器、wifi信息，注意:所有信息都配置完成之后才能调用configDeviceConnectServerWithSucBlock:failedBlock:方法，设备会去连接mqtt服务器.
+## MKSDKForBLE----SDK For BLE
 
-#### 2.2mqtt服务器通信部分
-    MKMQTTServerManager用来实现APP与mqtt服务器通信，包括连接服务器、发布数据等.
-由于设备目前通信只支持16进制数据，所以只能通过调用publishData:topic:sucBlock:failedBlock:方法发布数据给设备.
+   The app communicates with the device via Bluetooth, which is mainly used to configure the device's mqtt server, wifi and other information.MKScannerCentralManager is used to scan devices and connect devices. MKBLESDKInterface is used to configure specific mqtt server and wifi information. Note: After all the information is configured, you can call the configDeviceConnectServerWithSucBlock:failedBlock:method, and the device will connect to the mqtt server.
 
-##### eg:读取设备的名字
-//设置代理，接收服务器传过来的数据
+## MKMQTTServerManager---SDK For MQTT Server
+   MKMQTTServerManager is used to implement communication between APP and mqtt server, including connecting to the server and publishing data.Because the device currently only supports hexadecimal data for communication, it can only publish data to the device by calling the publishData:topic:sucBlock:failedBlock: method.
+
+## eg:Read device name
+//Set up a delegate to receive data from the server
 /*
   - (void)sessionManager:(MKMQTTServerManager *)sessionManager didReceiveMessage:(NSData *)data onTopic:(NSString *)topic {
-    //mqtt服务器传过来的数据
+    //Data from the mqtt server
   }
 */
 
