@@ -1,1 +1,1 @@
-../../../../../MKScannerSDK/Classes/MKSDKForBLE/CBPeripheral+MKBLEAdd.h
+../../../../../MKScannerSDK/Classes/CBPeripheral+MKBLEAdd.h

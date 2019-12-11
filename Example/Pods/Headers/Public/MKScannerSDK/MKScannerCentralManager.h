@@ -1,1 +1,1 @@
-../../../../../MKScannerSDK/Classes/MKSDKForBLE/MKScannerCentralManager.h
+../../../../../MKScannerSDK/Classes/MKScannerCentralManager.h

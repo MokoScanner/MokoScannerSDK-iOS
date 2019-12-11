@@ -1,1 +1,1 @@
-../../../../../MKScannerSDK/Classes/MKSDKForBLE/MKBLETaskOperation.h
+../../../../../MKScannerSDK/Classes/MKBLETaskOperation.h

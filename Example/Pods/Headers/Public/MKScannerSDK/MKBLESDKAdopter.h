@@ -1,1 +1,1 @@
-../../../../../MKScannerSDK/Classes/MKSDKForBLE/MKBLESDKAdopter.h
+../../../../../MKScannerSDK/Classes/MKBLESDKAdopter.h

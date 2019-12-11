@@ -30,13 +30,6 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.subspec 'MKSDKForBLE' do |ss|
-    ss.source_files = 'MKScannerSDK/Classes/MKSDKForBLE/**'
-  end
-  
-  s.subspec 'MKSDKForMqttServer' do |ss|
-    ss.source_files = 'MKScannerSDK/Classes/MKSDKForMqttServer/**'
-    ss.dependency 'MQTTClient','0.14.0'
-  end
+  s.source_files = 'MKScannerSDK/Classes/**'
   
 end

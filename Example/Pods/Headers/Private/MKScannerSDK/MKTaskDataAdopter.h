@@ -1,1 +1,1 @@
-../../../../../MKScannerSDK/Classes/MKSDKForBLE/MKTaskDataAdopter.h
+../../../../../MKScannerSDK/Classes/MKTaskDataAdopter.h

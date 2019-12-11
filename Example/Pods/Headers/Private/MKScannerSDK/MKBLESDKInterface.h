@@ -1,1 +1,1 @@
-../../../../../MKScannerSDK/Classes/MKSDKForBLE/MKBLESDKInterface.h
+../../../../../MKScannerSDK/Classes/MKBLESDKInterface.h
