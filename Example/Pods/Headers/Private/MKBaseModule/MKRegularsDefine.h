@@ -1,1 +1,0 @@
-../../../MKBaseModule/MKBaseModule/macroDefines/MKRegularsDefine.h

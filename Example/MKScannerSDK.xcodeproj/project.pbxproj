@@ -184,6 +184,40 @@
 		0050D594239E4C9100AF8510 /* MKMQTTServerDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D4DD239E4C9000AF8510 /* MKMQTTServerDataManager.m */; };
 		0050D595239E4C9100AF8510 /* MKConfigServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D4DF239E4C9000AF8510 /* MKConfigServerModel.m */; };
 		0050D596239E4C9100AF8510 /* MKMQTTSDKAdopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D4E3239E4C9000AF8510 /* MKMQTTSDKAdopter.m */; };
+		0059056A239F9DF100A6E79C /* MKDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590510239F9DF100A6E79C /* MKDateFormatter.m */; };
+		0059056B239F9DF100A6E79C /* MKAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590513239F9DF100A6E79C /* MKAttributedString.m */; };
+		0059056C239F9DF100A6E79C /* MKHudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590516239F9DF100A6E79C /* MKHudManager.m */; };
+		0059056D239F9DF100A6E79C /* MKTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590519239F9DF100A6E79C /* MKTimePickerView.m */; };
+		0059056E239F9DF100A6E79C /* UIView+XDRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0059051D239F9DF100A6E79C /* UIView+XDRefresh.m */; };
+		0059056F239F9DF100A6E79C /* MKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590520239F9DF100A6E79C /* MKProgressView.m */; };
+		00590570239F9DF100A6E79C /* MKHexKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590522239F9DF100A6E79C /* MKHexKeyboard.m */; };
+		00590571239F9DF100A6E79C /* MKPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590526239F9DF100A6E79C /* MKPageControl.m */; };
+		00590572239F9DF100A6E79C /* MKHaveRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590528239F9DF100A6E79C /* MKHaveRefreshTableView.m */; };
+		00590573239F9DF100A6E79C /* MKHaveRefreshCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590529239F9DF100A6E79C /* MKHaveRefreshCollectionView.m */; };
+		00590575239F9DF100A6E79C /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590531239F9DF100A6E79C /* NirKxMenu.m */; };
+		00590576239F9DF100A6E79C /* UITextField+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0059053A239F9DF100A6E79C /* UITextField+MKCategoryModule.m */; };
+		00590577239F9DF100A6E79C /* UIScrollView+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0059053C239F9DF100A6E79C /* UIScrollView+MKCategoryModule.m */; };
+		00590578239F9DF200A6E79C /* NSString+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0059053F239F9DF100A6E79C /* NSString+MKCategoryModule.m */; };
+		00590579239F9DF200A6E79C /* UIImage+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590541239F9DF100A6E79C /* UIImage+MKCategoryModule.m */; };
+		0059057A239F9DF200A6E79C /* NSInvocation+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590542239F9DF100A6E79C /* NSInvocation+MKCategoryModule.m */; };
+		0059057B239F9DF200A6E79C /* UIApplication+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590543239F9DF100A6E79C /* UIApplication+MKCategoryModule.m */; };
+		0059057C239F9DF200A6E79C /* NSDateFormatter+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590544239F9DF100A6E79C /* NSDateFormatter+MKCategoryModule.m */; };
+		0059057D239F9DF200A6E79C /* NSObject+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590547239F9DF100A6E79C /* NSObject+MKCategoryModule.m */; };
+		0059057E239F9DF200A6E79C /* UIView+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590548239F9DF100A6E79C /* UIView+MKCategoryModule.m */; };
+		0059057F239F9DF200A6E79C /* UIButton+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0059054A239F9DF100A6E79C /* UIButton+MKCategoryModule.m */; };
+		00590580239F9DF200A6E79C /* UINavigationItem+MKCategoryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0059054F239F9DF100A6E79C /* UINavigationItem+MKCategoryModule.m */; };
+		00590581239F9DF200A6E79C /* keyboardDelIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00590553239F9DF100A6E79C /* keyboardDelIcon@3x.png */; };
+		00590582239F9DF200A6E79C /* keyboardDelIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00590554239F9DF100A6E79C /* keyboardDelIcon@2x.png */; };
+		00590583239F9DF200A6E79C /* default_navigation_back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00590555239F9DF100A6E79C /* default_navigation_back_button@2x.png */; };
+		00590584239F9DF200A6E79C /* default_navigation_back_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00590556239F9DF100A6E79C /* default_navigation_back_button@3x.png */; };
+		00590585239F9DF200A6E79C /* navigation_back_button_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00590557239F9DF100A6E79C /* navigation_back_button_white@3x.png */; };
+		00590586239F9DF200A6E79C /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 00590558239F9DF100A6E79C /* refresh.png */; };
+		00590587239F9DF200A6E79C /* navigation_back_button_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00590559239F9DF100A6E79C /* navigation_back_button_white@2x.png */; };
+		00590588239F9DF200A6E79C /* MKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0059055C239F9DF100A6E79C /* MKBaseViewController.m */; };
+		00590589239F9DF200A6E79C /* MKBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590561239F9DF100A6E79C /* MKBaseTableView.m */; };
+		0059058A239F9DF200A6E79C /* MKBaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590564239F9DF100A6E79C /* MKBaseCollectionView.m */; };
+		0059058B239F9DF200A6E79C /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590566239F9DF100A6E79C /* WRNavigationBar.m */; };
+		0059058C239F9DF200A6E79C /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590569239F9DF100A6E79C /* WRCustomNavigationBar.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -482,6 +516,75 @@
 		0050D4E1239E4C9000AF8510 /* MKMQTTServerDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerDataManager.h; sourceTree = "<group>"; };
 		0050D4E2239E4C9000AF8510 /* MKMqttServerIntefaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMqttServerIntefaces.h; sourceTree = "<group>"; };
 		0050D4E3239E4C9000AF8510 /* MKMQTTSDKAdopter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTSDKAdopter.m; sourceTree = "<group>"; };
+		0059050F239F9DF100A6E79C /* MKDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDateFormatter.h; sourceTree = "<group>"; };
+		00590510239F9DF100A6E79C /* MKDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDateFormatter.m; sourceTree = "<group>"; };
+		00590512239F9DF100A6E79C /* MKAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAttributedString.h; sourceTree = "<group>"; };
+		00590513239F9DF100A6E79C /* MKAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAttributedString.m; sourceTree = "<group>"; };
+		00590516239F9DF100A6E79C /* MKHudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKHudManager.m; sourceTree = "<group>"; };
+		00590517239F9DF100A6E79C /* MKHudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKHudManager.h; sourceTree = "<group>"; };
+		00590519239F9DF100A6E79C /* MKTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTimePickerView.m; sourceTree = "<group>"; };
+		0059051A239F9DF100A6E79C /* MKTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTimePickerView.h; sourceTree = "<group>"; };
+		0059051C239F9DF100A6E79C /* UIView+XDRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XDRefresh.h"; sourceTree = "<group>"; };
+		0059051D239F9DF100A6E79C /* UIView+XDRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XDRefresh.m"; sourceTree = "<group>"; };
+		0059051F239F9DF100A6E79C /* MKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKProgressView.h; sourceTree = "<group>"; };
+		00590520239F9DF100A6E79C /* MKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKProgressView.m; sourceTree = "<group>"; };
+		00590522239F9DF100A6E79C /* MKHexKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKHexKeyboard.m; sourceTree = "<group>"; };
+		00590523239F9DF100A6E79C /* MKHexKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKHexKeyboard.h; sourceTree = "<group>"; };
+		00590525239F9DF100A6E79C /* MKPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPageControl.h; sourceTree = "<group>"; };
+		00590526239F9DF100A6E79C /* MKPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPageControl.m; sourceTree = "<group>"; };
+		00590528239F9DF100A6E79C /* MKHaveRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKHaveRefreshTableView.m; sourceTree = "<group>"; };
+		00590529239F9DF100A6E79C /* MKHaveRefreshCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKHaveRefreshCollectionView.m; sourceTree = "<group>"; };
+		0059052A239F9DF100A6E79C /* MKHaveRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKHaveRefreshTableView.h; sourceTree = "<group>"; };
+		0059052B239F9DF100A6E79C /* MKHaveRefreshCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKHaveRefreshCollectionView.h; sourceTree = "<group>"; };
+		0059052C239F9DF100A6E79C /* MKHaveRefreshViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKHaveRefreshViewProtocol.h; sourceTree = "<group>"; };
+		00590531239F9DF100A6E79C /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
+		00590532239F9DF100A6E79C /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
+		00590534239F9DF100A6E79C /* MKMacroDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMacroDefines.h; sourceTree = "<group>"; };
+		00590535239F9DF100A6E79C /* MKRegularsDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRegularsDefine.h; sourceTree = "<group>"; };
+		00590536239F9DF100A6E79C /* MKContentDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKContentDefine.h; sourceTree = "<group>"; };
+		00590537239F9DF100A6E79C /* MKDeviceDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDeviceDefine.h; sourceTree = "<group>"; };
+		00590538239F9DF100A6E79C /* MKCommonColorsDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCommonColorsDefine.h; sourceTree = "<group>"; };
+		0059053A239F9DF100A6E79C /* UITextField+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MKCategoryModule.m"; sourceTree = "<group>"; };
+		0059053B239F9DF100A6E79C /* UIButton+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059053C239F9DF100A6E79C /* UIScrollView+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MKCategoryModule.m"; sourceTree = "<group>"; };
+		0059053D239F9DF100A6E79C /* UIView+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059053E239F9DF100A6E79C /* NSObject+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059053F239F9DF100A6E79C /* NSString+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590540239F9DF100A6E79C /* MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCategoryModule.h; sourceTree = "<group>"; };
+		00590541239F9DF100A6E79C /* UIImage+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590542239F9DF100A6E79C /* NSInvocation+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590543239F9DF100A6E79C /* UIApplication+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590544239F9DF100A6E79C /* NSDateFormatter+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590545239F9DF100A6E79C /* UINavigationItem+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+MKCategoryModule.h"; sourceTree = "<group>"; };
+		00590546239F9DF100A6E79C /* NSString+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKCategoryModule.h"; sourceTree = "<group>"; };
+		00590547239F9DF100A6E79C /* NSObject+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590548239F9DF100A6E79C /* UIView+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590549239F9DF100A6E79C /* UIScrollView+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059054A239F9DF100A6E79C /* UIButton+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MKCategoryModule.m"; sourceTree = "<group>"; };
+		0059054B239F9DF100A6E79C /* UITextField+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059054C239F9DF100A6E79C /* UIImage+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059054D239F9DF100A6E79C /* UIApplication+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059054E239F9DF100A6E79C /* NSInvocation+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+MKCategoryModule.h"; sourceTree = "<group>"; };
+		0059054F239F9DF100A6E79C /* UINavigationItem+MKCategoryModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+MKCategoryModule.m"; sourceTree = "<group>"; };
+		00590550239F9DF100A6E79C /* NSDateFormatter+MKCategoryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+MKCategoryModule.h"; sourceTree = "<group>"; };
+		00590551239F9DF100A6E79C /* MKBaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBaseModule.h; sourceTree = "<group>"; };
+		00590553239F9DF100A6E79C /* keyboardDelIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboardDelIcon@3x.png"; sourceTree = "<group>"; };
+		00590554239F9DF100A6E79C /* keyboardDelIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboardDelIcon@2x.png"; sourceTree = "<group>"; };
+		00590555239F9DF100A6E79C /* default_navigation_back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_navigation_back_button@2x.png"; sourceTree = "<group>"; };
+		00590556239F9DF100A6E79C /* default_navigation_back_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_navigation_back_button@3x.png"; sourceTree = "<group>"; };
+		00590557239F9DF100A6E79C /* navigation_back_button_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back_button_white@3x.png"; sourceTree = "<group>"; };
+		00590558239F9DF100A6E79C /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		00590559239F9DF100A6E79C /* navigation_back_button_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back_button_white@2x.png"; sourceTree = "<group>"; };
+		0059055C239F9DF100A6E79C /* MKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBaseViewController.m; sourceTree = "<group>"; };
+		0059055D239F9DF100A6E79C /* MKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBaseViewController.h; sourceTree = "<group>"; };
+		00590560239F9DF100A6E79C /* MKBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBaseTableView.h; sourceTree = "<group>"; };
+		00590561239F9DF100A6E79C /* MKBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBaseTableView.m; sourceTree = "<group>"; };
+		00590563239F9DF100A6E79C /* MKBaseCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBaseCollectionView.h; sourceTree = "<group>"; };
+		00590564239F9DF100A6E79C /* MKBaseCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBaseCollectionView.m; sourceTree = "<group>"; };
+		00590566239F9DF100A6E79C /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
+		00590567239F9DF100A6E79C /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		00590568239F9DF100A6E79C /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		00590569239F9DF100A6E79C /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		11CE44FB5BD98B16B2875BD9 /* Pods-MKScannerSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKScannerSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-MKScannerSDK_Example/Pods-MKScannerSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		345CC7E5A5B399C407C9C66F /* MKScannerSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MKScannerSDK.podspec; path = ../MKScannerSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5E14C9DA7F03889EEB1120B2 /* Pods-MKScannerSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKScannerSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-MKScannerSDK_Example/Pods-MKScannerSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -1383,6 +1486,250 @@
 			path = interface;
 			sourceTree = "<group>";
 		};
+		0059050C239F9DF100A6E79C /* MKBaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				0059050D239F9DF100A6E79C /* tools */,
+				00590514239F9DF100A6E79C /* customUI */,
+				00590533239F9DF100A6E79C /* macroDefines */,
+				00590539239F9DF100A6E79C /* category */,
+				00590551239F9DF100A6E79C /* MKBaseModule.h */,
+				00590552239F9DF100A6E79C /* Assets */,
+				0059055A239F9DF100A6E79C /* base */,
+			);
+			path = MKBaseModule;
+			sourceTree = "<group>";
+		};
+		0059050D239F9DF100A6E79C /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				0059050E239F9DF100A6E79C /* MKDateFormatter */,
+				00590511239F9DF100A6E79C /* MKAttributedString */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		0059050E239F9DF100A6E79C /* MKDateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				0059050F239F9DF100A6E79C /* MKDateFormatter.h */,
+				00590510239F9DF100A6E79C /* MKDateFormatter.m */,
+			);
+			path = MKDateFormatter;
+			sourceTree = "<group>";
+		};
+		00590511239F9DF100A6E79C /* MKAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				00590512239F9DF100A6E79C /* MKAttributedString.h */,
+				00590513239F9DF100A6E79C /* MKAttributedString.m */,
+			);
+			path = MKAttributedString;
+			sourceTree = "<group>";
+		};
+		00590514239F9DF100A6E79C /* customUI */ = {
+			isa = PBXGroup;
+			children = (
+				00590515239F9DF100A6E79C /* MKHudManager */,
+				00590518239F9DF100A6E79C /* MKTimePicker */,
+				0059051B239F9DF100A6E79C /* XDRefresh */,
+				0059051E239F9DF100A6E79C /* MKProgressView */,
+				00590521239F9DF100A6E79C /* MKHexKeyBoard */,
+				00590524239F9DF100A6E79C /* MKPageControl */,
+				00590527239F9DF100A6E79C /* HaveRefreshView */,
+				00590530239F9DF100A6E79C /* NirKxMenu */,
+			);
+			path = customUI;
+			sourceTree = "<group>";
+		};
+		00590515239F9DF100A6E79C /* MKHudManager */ = {
+			isa = PBXGroup;
+			children = (
+				00590516239F9DF100A6E79C /* MKHudManager.m */,
+				00590517239F9DF100A6E79C /* MKHudManager.h */,
+			);
+			path = MKHudManager;
+			sourceTree = "<group>";
+		};
+		00590518239F9DF100A6E79C /* MKTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				00590519239F9DF100A6E79C /* MKTimePickerView.m */,
+				0059051A239F9DF100A6E79C /* MKTimePickerView.h */,
+			);
+			path = MKTimePicker;
+			sourceTree = "<group>";
+		};
+		0059051B239F9DF100A6E79C /* XDRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				0059051C239F9DF100A6E79C /* UIView+XDRefresh.h */,
+				0059051D239F9DF100A6E79C /* UIView+XDRefresh.m */,
+			);
+			path = XDRefresh;
+			sourceTree = "<group>";
+		};
+		0059051E239F9DF100A6E79C /* MKProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				0059051F239F9DF100A6E79C /* MKProgressView.h */,
+				00590520239F9DF100A6E79C /* MKProgressView.m */,
+			);
+			path = MKProgressView;
+			sourceTree = "<group>";
+		};
+		00590521239F9DF100A6E79C /* MKHexKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				00590522239F9DF100A6E79C /* MKHexKeyboard.m */,
+				00590523239F9DF100A6E79C /* MKHexKeyboard.h */,
+			);
+			path = MKHexKeyBoard;
+			sourceTree = "<group>";
+		};
+		00590524239F9DF100A6E79C /* MKPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				00590525239F9DF100A6E79C /* MKPageControl.h */,
+				00590526239F9DF100A6E79C /* MKPageControl.m */,
+			);
+			path = MKPageControl;
+			sourceTree = "<group>";
+		};
+		00590527239F9DF100A6E79C /* HaveRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				00590528239F9DF100A6E79C /* MKHaveRefreshTableView.m */,
+				00590529239F9DF100A6E79C /* MKHaveRefreshCollectionView.m */,
+				0059052A239F9DF100A6E79C /* MKHaveRefreshTableView.h */,
+				0059052B239F9DF100A6E79C /* MKHaveRefreshCollectionView.h */,
+				0059052C239F9DF100A6E79C /* MKHaveRefreshViewProtocol.h */,
+			);
+			path = HaveRefreshView;
+			sourceTree = "<group>";
+		};
+		00590530239F9DF100A6E79C /* NirKxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				00590531239F9DF100A6E79C /* NirKxMenu.m */,
+				00590532239F9DF100A6E79C /* NirKxMenu.h */,
+			);
+			path = NirKxMenu;
+			sourceTree = "<group>";
+		};
+		00590533239F9DF100A6E79C /* macroDefines */ = {
+			isa = PBXGroup;
+			children = (
+				00590534239F9DF100A6E79C /* MKMacroDefines.h */,
+				00590535239F9DF100A6E79C /* MKRegularsDefine.h */,
+				00590536239F9DF100A6E79C /* MKContentDefine.h */,
+				00590537239F9DF100A6E79C /* MKDeviceDefine.h */,
+				00590538239F9DF100A6E79C /* MKCommonColorsDefine.h */,
+			);
+			path = macroDefines;
+			sourceTree = "<group>";
+		};
+		00590539239F9DF100A6E79C /* category */ = {
+			isa = PBXGroup;
+			children = (
+				0059053A239F9DF100A6E79C /* UITextField+MKCategoryModule.m */,
+				0059053B239F9DF100A6E79C /* UIButton+MKCategoryModule.h */,
+				0059053C239F9DF100A6E79C /* UIScrollView+MKCategoryModule.m */,
+				0059053D239F9DF100A6E79C /* UIView+MKCategoryModule.h */,
+				0059053E239F9DF100A6E79C /* NSObject+MKCategoryModule.h */,
+				0059053F239F9DF100A6E79C /* NSString+MKCategoryModule.m */,
+				00590540239F9DF100A6E79C /* MKCategoryModule.h */,
+				00590541239F9DF100A6E79C /* UIImage+MKCategoryModule.m */,
+				00590542239F9DF100A6E79C /* NSInvocation+MKCategoryModule.m */,
+				00590543239F9DF100A6E79C /* UIApplication+MKCategoryModule.m */,
+				00590544239F9DF100A6E79C /* NSDateFormatter+MKCategoryModule.m */,
+				00590545239F9DF100A6E79C /* UINavigationItem+MKCategoryModule.h */,
+				00590546239F9DF100A6E79C /* NSString+MKCategoryModule.h */,
+				00590547239F9DF100A6E79C /* NSObject+MKCategoryModule.m */,
+				00590548239F9DF100A6E79C /* UIView+MKCategoryModule.m */,
+				00590549239F9DF100A6E79C /* UIScrollView+MKCategoryModule.h */,
+				0059054A239F9DF100A6E79C /* UIButton+MKCategoryModule.m */,
+				0059054B239F9DF100A6E79C /* UITextField+MKCategoryModule.h */,
+				0059054C239F9DF100A6E79C /* UIImage+MKCategoryModule.h */,
+				0059054D239F9DF100A6E79C /* UIApplication+MKCategoryModule.h */,
+				0059054E239F9DF100A6E79C /* NSInvocation+MKCategoryModule.h */,
+				0059054F239F9DF100A6E79C /* UINavigationItem+MKCategoryModule.m */,
+				00590550239F9DF100A6E79C /* NSDateFormatter+MKCategoryModule.h */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		00590552239F9DF100A6E79C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				00590553239F9DF100A6E79C /* keyboardDelIcon@3x.png */,
+				00590554239F9DF100A6E79C /* keyboardDelIcon@2x.png */,
+				00590555239F9DF100A6E79C /* default_navigation_back_button@2x.png */,
+				00590556239F9DF100A6E79C /* default_navigation_back_button@3x.png */,
+				00590557239F9DF100A6E79C /* navigation_back_button_white@3x.png */,
+				00590558239F9DF100A6E79C /* refresh.png */,
+				00590559239F9DF100A6E79C /* navigation_back_button_white@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0059055A239F9DF100A6E79C /* base */ = {
+			isa = PBXGroup;
+			children = (
+				0059055B239F9DF100A6E79C /* controller */,
+				0059055E239F9DF100A6E79C /* view */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		0059055B239F9DF100A6E79C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0059055C239F9DF100A6E79C /* MKBaseViewController.m */,
+				0059055D239F9DF100A6E79C /* MKBaseViewController.h */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0059055E239F9DF100A6E79C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0059055F239F9DF100A6E79C /* tableView */,
+				00590562239F9DF100A6E79C /* collectionView */,
+				00590565239F9DF100A6E79C /* WRNavigationBar */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0059055F239F9DF100A6E79C /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				00590560239F9DF100A6E79C /* MKBaseTableView.h */,
+				00590561239F9DF100A6E79C /* MKBaseTableView.m */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		00590562239F9DF100A6E79C /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				00590563239F9DF100A6E79C /* MKBaseCollectionView.h */,
+				00590564239F9DF100A6E79C /* MKBaseCollectionView.m */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
+		00590565239F9DF100A6E79C /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				00590566239F9DF100A6E79C /* WRNavigationBar.m */,
+				00590567239F9DF100A6E79C /* WRCustomNavigationBar.h */,
+				00590568239F9DF100A6E79C /* WRNavigationBar.h */,
+				00590569239F9DF100A6E79C /* WRCustomNavigationBar.m */,
+			);
+			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -1419,6 +1766,7 @@
 		6003F593195388D20070C39A /* Example for MKScannerSDK */ = {
 			isa = PBXGroup;
 			children = (
+				0059050C239F9DF100A6E79C /* MKBaseModule */,
 				0050D46C239E4C8F00AF8510 /* DeviceFuction */,
 				0050D476239E4C8F00AF8510 /* Expand */,
 				0050D3E6239E4C8E00AF8510 /* Functions */,
@@ -1582,6 +1930,7 @@
 				0050D502239E4C9000AF8510 /* configServer_ConnectMode_selected@3x.png in Resources */,
 				0050D4EF239E4C9000AF8510 /* deviceList_switchStateOffIcon@3x.png in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				00590586239F9DF200A6E79C /* refresh.png in Resources */,
 				0050D52B239E4C9000AF8510 /* device_plug_icon@3x.png in Resources */,
 				0050D58B239E4C9100AF8510 /* sliderMinimumTrackIcon@2x.png in Resources */,
 				0050D501239E4C9000AF8510 /* configServer_starIcon@3x.png in Resources */,
@@ -1591,6 +1940,7 @@
 				0050D505239E4C9000AF8510 /* about_telIcon@3x.png in Resources */,
 				0050D537239E4C9000AF8510 /* addDevice_centerPlugGif@3x.gif in Resources */,
 				0050D58C239E4C9100AF8510 /* sliderMinimumTrackIcon@3x.png in Resources */,
+				00590583239F9DF200A6E79C /* default_navigation_back_button@2x.png in Resources */,
 				0050D4F9239E4C9000AF8510 /* scanRightAboutIcon@2x.png in Resources */,
 				0050D4FA239E4C9000AF8510 /* deviceMainPage_searchIcon@3x.png in Resources */,
 				0050D52F239E4C9000AF8510 /* notBlinkAmberStep2_rightIcon@2x.png in Resources */,
@@ -1601,12 +1951,16 @@
 				0050D587239E4C9100AF8510 /* sliderThumbIcon@3x.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				0050D52D239E4C9000AF8510 /* addDevice_centerSwichGif@2x.gif in Resources */,
+				00590581239F9DF200A6E79C /* keyboardDelIcon@3x.png in Resources */,
 				0050D50B239E4C9000AF8510 /* about_faxIcon@2x.png in Resources */,
+				00590587239F9DF200A6E79C /* navigation_back_button_white@2x.png in Resources */,
+				00590584239F9DF200A6E79C /* default_navigation_back_button@3x.png in Resources */,
 				0050D50E239E4C9000AF8510 /* configPlugPage_scheduleOff@3x.png in Resources */,
 				0050D50F239E4C9000AF8510 /* configPlugPage_switchButtonOff@3x.png in Resources */,
 				0050D586239E4C9100AF8510 /* sliderMaximumTrackImage@3x.png in Resources */,
 				0050D512239E4C9000AF8510 /* configPlugPage_switchButtonOff@2x.png in Resources */,
 				0050D51F239E4C9000AF8510 /* configPlugPage_statisticsOff@2x.png in Resources */,
+				00590585239F9DF200A6E79C /* navigation_back_button_white@3x.png in Resources */,
 				0050D50C239E4C9000AF8510 /* about_faxIcon@3x.png in Resources */,
 				0050D4FD239E4C9000AF8510 /* configServer_triangleIcon@3x.png in Resources */,
 				0050D522239E4C9000AF8510 /* notBlinkAmberStep1_leftIcon@3x.png in Resources */,
@@ -1660,6 +2014,7 @@
 				0050D513239E4C9000AF8510 /* configPlugPage_scheduleOff@2x.png in Resources */,
 				0050D4FB239E4C9000AF8510 /* deviceMainPage_searchIcon@2x.png in Resources */,
 				0050D4F6239E4C9000AF8510 /* mokoLife_config_certAddIcon@2x.png in Resources */,
+				00590582239F9DF200A6E79C /* keyboardDelIcon@2x.png in Resources */,
 				0050D52E239E4C9000AF8510 /* addDevice_centerSwichGif@3x.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1683,13 +2038,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MKScannerSDK_Example/Pods-MKScannerSDK_Example-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/MKBaseModule/MKBaseModule/MKBaseModule.bundle",
 				"${PODS_ROOT}/MLInputDodger/Classes/MLInputDodger.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MKBaseModule.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MLInputDodger.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1727,11 +2080,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0050D546239E4C9000AF8510 /* MKConfigServerDeviceController.m in Sources */,
+				00590572239F9DF100A6E79C /* MKHaveRefreshTableView.m in Sources */,
+				0059058B239F9DF200A6E79C /* WRNavigationBar.m in Sources */,
 				0050D57D239E4C9100AF8510 /* UIView+EasyShowExt.m in Sources */,
+				0059056D239F9DF100A6E79C /* MKTimePickerView.m in Sources */,
 				0050D542239E4C9000AF8510 /* MKDeviceInformationController.m in Sources */,
 				0050D551239E4C9000AF8510 /* MKConfigServerHostCell.m in Sources */,
 				0050D592239E4C9100AF8510 /* MKMQTTServerInterface+MKConfig.m in Sources */,
 				0050D564239E4C9100AF8510 /* MKConnectDeviceView.m in Sources */,
+				00590573239F9DF100A6E79C /* MKHaveRefreshCollectionView.m in Sources */,
 				0050D560239E4C9100AF8510 /* MKAddDeviceController.m in Sources */,
 				0050D563239E4C9100AF8510 /* MKConnectDeviceWifiView.m in Sources */,
 				0050D56F239E4C9100AF8510 /* EasyTextTypes.m in Sources */,
@@ -1741,6 +2098,7 @@
 				0050D55B239E4C9100AF8510 /* MKAboutCellModel.m in Sources */,
 				0050D591239E4C9100AF8510 /* MKMQTTServerInterface.m in Sources */,
 				0050D544239E4C9000AF8510 /* MKDeviceInformationCell.m in Sources */,
+				00590589239F9DF200A6E79C /* MKBaseTableView.m in Sources */,
 				0050D593239E4C9100AF8510 /* MKMQTTServerErrorBlockAdopter.m in Sources */,
 				0050D53D239E4C9000AF8510 /* MKAddDeviceView.m in Sources */,
 				0050D581239E4C9100AF8510 /* EasyLodingGlobalConfig.m in Sources */,
@@ -1749,10 +2107,12 @@
 				0050D57B239E4C9100AF8510 /* EasyShowUtils.m in Sources */,
 				0050D56D239E4C9100AF8510 /* EasyTextGlobalConfig.m in Sources */,
 				0050D577239E4C9100AF8510 /* EasyAlertView.m in Sources */,
+				0059057F239F9DF200A6E79C /* UIButton+MKCategoryModule.m in Sources */,
 				0050D574239E4C9100AF8510 /* EasyEmptyTypes.m in Sources */,
 				0050D579239E4C9100AF8510 /* EasyAlertGlobalConfig.m in Sources */,
 				0050D57A239E4C9100AF8510 /* EasyAlertPart.m in Sources */,
 				0050D540239E4C9000AF8510 /* MKDeviceMainPageCell.m in Sources */,
+				0059056C239F9DF100A6E79C /* MKHudManager.m in Sources */,
 				0050D571239E4C9100AF8510 /* EasyEmptyView.m in Sources */,
 				0050D57E239E4C9100AF8510 /* EasyLodingTypes.m in Sources */,
 				0050D590239E4C9100AF8510 /* MKBaseCell.m in Sources */,
@@ -1761,12 +2121,17 @@
 				0050D543239E4C9000AF8510 /* MKDeviceInformationModel.m in Sources */,
 				0050D566239E4C9100AF8510 /* MKDeviceServerController.m in Sources */,
 				0050D54F239E4C9000AF8510 /* MKConfigServerQosCell.m in Sources */,
+				0059056B239F9DF100A6E79C /* MKAttributedString.m in Sources */,
+				0059057D239F9DF200A6E79C /* NSObject+MKCategoryModule.m in Sources */,
 				0050D53E239E4C9000AF8510 /* MKDeviceMainPageController.m in Sources */,
 				0050D56A239E4C9100AF8510 /* MKCommonlyUIHelper.m in Sources */,
 				0050D55A239E4C9100AF8510 /* MKAboutController.m in Sources */,
+				0059058C239F9DF200A6E79C /* WRCustomNavigationBar.m in Sources */,
+				00590575239F9DF100A6E79C /* NirKxMenu.m in Sources */,
 				0050D561239E4C9100AF8510 /* MKDeviceBLEConfigManager.m in Sources */,
 				0050D594239E4C9100AF8510 /* MKMQTTServerDataManager.m in Sources */,
 				0050D578239E4C9100AF8510 /* EasyAlertConfig.m in Sources */,
+				0059057C239F9DF200A6E79C /* NSDateFormatter+MKCategoryModule.m in Sources */,
 				0050D573239E4C9100AF8510 /* EasyEmptyGlobalConfig.m in Sources */,
 				0050D548239E4C9000AF8510 /* MKConfigServerAdopter.m in Sources */,
 				0050D580239E4C9100AF8510 /* EasyLodingConfig.m in Sources */,
@@ -1775,28 +2140,38 @@
 				0050D57C239E4C9100AF8510 /* EasyShowLabel.m in Sources */,
 				0050D552239E4C9000AF8510 /* MKUpdateFirmwareController.m in Sources */,
 				0050D568239E4C9100AF8510 /* MKDeviceModel.m in Sources */,
+				00590570239F9DF100A6E79C /* MKHexKeyboard.m in Sources */,
+				0059056E239F9DF100A6E79C /* UIView+XDRefresh.m in Sources */,
+				00590580239F9DF200A6E79C /* UINavigationItem+MKCategoryModule.m in Sources */,
 				0050D569239E4C9100AF8510 /* MKAddDeviceCenter.m in Sources */,
 				0050D570239E4C9100AF8510 /* EasyEmptyConfig.m in Sources */,
+				00590576239F9DF100A6E79C /* UITextField+MKCategoryModule.m in Sources */,
 				0050D53C239E4C9000AF8510 /* MKDeviceListCell.m in Sources */,
 				0050D55E239E4C9100AF8510 /* MKScanDeviceModel.m in Sources */,
 				0050D575239E4C9100AF8510 /* EasyAlertTypes.m in Sources */,
 				0050D53F239E4C9000AF8510 /* MKEditFilterController.m in Sources */,
 				0050D582239E4C9100AF8510 /* MKConnectAlertView.m in Sources */,
 				0050D58D239E4C9100AF8510 /* MKDeviceServerConfigDatabase.m in Sources */,
+				0059057E239F9DF200A6E79C /* UIView+MKCategoryModule.m in Sources */,
 				0050D555239E4C9000AF8510 /* MKUpdateFirmwareCell.m in Sources */,
 				6003F59E195388D20070C39A /* MKAppDelegate.m in Sources */,
 				0050D55C239E4C9100AF8510 /* MKAboutPageCell.m in Sources */,
 				0050D54A239E4C9000AF8510 /* MKConfigServerSSLCertModel.m in Sources */,
+				00590571239F9DF100A6E79C /* MKPageControl.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				00590588239F9DF200A6E79C /* MKBaseViewController.m in Sources */,
 				0050D559239E4C9100AF8510 /* MKDeviceInfoCell.m in Sources */,
 				0050D53A239E4C9000AF8510 /* MKSaveDeviceNameController.m in Sources */,
 				0050D57F239E4C9100AF8510 /* EasyLodingView.m in Sources */,
 				0050D55D239E4C9100AF8510 /* MKScanDeviceController.m in Sources */,
 				0050D53B239E4C9000AF8510 /* MKDeviceListController.m in Sources */,
+				00590577239F9DF100A6E79C /* UIScrollView+MKCategoryModule.m in Sources */,
 				0050D572239E4C9100AF8510 /* EasyEmptyPart.m in Sources */,
 				0050D56B239E4C9100AF8510 /* EasyTextConfig.m in Sources */,
 				0050D596239E4C9100AF8510 /* MKMQTTSDKAdopter.m in Sources */,
 				0050D56E239E4C9100AF8510 /* EasyTextBgView.m in Sources */,
+				0059057B239F9DF200A6E79C /* UIApplication+MKCategoryModule.m in Sources */,
+				00590578239F9DF200A6E79C /* NSString+MKCategoryModule.m in Sources */,
 				0050D583239E4C9100AF8510 /* MKNetworkManager.m in Sources */,
 				0050D565239E4C9100AF8510 /* MKConnectDeviceProgressView.m in Sources */,
 				0050D576239E4C9100AF8510 /* EasyAlertItem.m in Sources */,
@@ -1805,13 +2180,18 @@
 				0050D553239E4C9000AF8510 /* MKDeviceInfoController.m in Sources */,
 				0050D56C239E4C9100AF8510 /* EasyTextView.m in Sources */,
 				0050D54E239E4C9000AF8510 /* MKConfigServerPickView.m in Sources */,
+				0059056F239F9DF100A6E79C /* MKProgressView.m in Sources */,
 				0050D55F239E4C9100AF8510 /* MKScanDeviceCell.m in Sources */,
 				0050D54B239E4C9000AF8510 /* MKConfigServerConnectModeCell.m in Sources */,
 				0050D558239E4C9000AF8510 /* MKUpdateFirmwareTypeCell.m in Sources */,
 				0050D550239E4C9000AF8510 /* MKConfigServerPortCell.m in Sources */,
+				0059058A239F9DF200A6E79C /* MKBaseCollectionView.m in Sources */,
+				00590579239F9DF200A6E79C /* UIImage+MKCategoryModule.m in Sources */,
 				0050D567239E4C9100AF8510 /* MKCommonMethod.m in Sources */,
 				0050D545239E4C9000AF8510 /* MKCertListController.m in Sources */,
+				0059057A239F9DF200A6E79C /* NSInvocation+MKCategoryModule.m in Sources */,
 				0050D556239E4C9000AF8510 /* MKUpdateFirmwareHostTypeCell.m in Sources */,
+				0059056A239F9DF100A6E79C /* MKDateFormatter.m in Sources */,
 				0050D58E239E4C9100AF8510 /* MKDeviceDataBaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
