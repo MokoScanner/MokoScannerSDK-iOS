@@ -29,96 +29,96 @@ typedef NS_ENUM(NSInteger, mqttServerQosMode) {
 
 #pragma mark - interface
 /**
- Config server host
+ 配置服务器地址
  
- @param host Host ip address
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param host host
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configServerHost:(NSString *)host
                 sucBlock:(mk_communicationSuccessBlock)sucBlock
              failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Config server port
+ 配置服务器port
 
- @param port port，port range (0~65535)
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param port port，范围0~65535
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configServerPort:(NSInteger)port
                 sucBlock:(mk_communicationSuccessBlock)sucBlock
              failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Whether to clean the session
+ 配置服务器是否清除session
 
- @param clean NO: means to create a persistent session, which remains and saves the offline message until the session expires when the client is disconnected.YES: means to create a new temporary session, which is automatically destroyed when the client disconnects.
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param clean YES:清除，NO:保留
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configServerCleanSession:(BOOL)clean
                         sucBlock:(mk_communicationSuccessBlock)sucBlock
                      failedBlock:(mk_communicationFailedBlock)failedBlock;
 /**
- The only identification number, equipment configuration equipment MQTT communication inside when submitted to MQTT server data will return the id, multiple devices, which is can be used as the equipment of the data returned.
+ 配置DeviceID
 
- @param deviceID range 0~32
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param deviceID APP给设备指定的唯一标识,长度1~32
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configDeviceID:(NSString *)deviceID
               sucBlock:(mk_communicationSuccessBlock)sucBlock
            failedBlock:(mk_communicationFailedBlock)failedBlock;
 /**
- The MQTT server USES the plug as the clientID to distinguish between different plug devices, and if the item is empty, the plug will by default communicate with the MQTT server using the MAC address as the clientID.Device MAC addresses are recommended.length 0~64
+ 配置clientID
 
- @param clientID clientID,length 0~64
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param clientID clientID,长度1~64
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configClientID:(NSString *)clientID
               sucBlock:(mk_communicationSuccessBlock)sucBlock
            failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Configure the server user name. Note that if the server does not require user name + password authentication, it can be left blank.
+ 配置服务器用户名，注意，如果服务器不需要通过用户名+密码这种形式验证，则可以为空
 
- @param userName 0~255
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param userName 用户名，长度0~255
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configUserName:(NSString *)userName
               sucBlock:(mk_communicationSuccessBlock)sucBlock
            failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Configure the server user name. Note that if the server does not require user name + password authentication, it can be left blank.
+ 配置服务器密码，注意，如果服务器不需要通过用户名+密码这种形式验证，则可以为空
 
  @param password password
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configPassword:(NSString *)password
               sucBlock:(mk_communicationSuccessBlock)sucBlock
            failedBlock:(mk_communicationFailedBlock)failedBlock;
 /**
- heartbeat package time, the range is 10~120, and unitis °∞s°±
+ 配置服务器KeepAlive
 
- @param keepAlive heartbeat package time, the range is 10~120, and unitis °∞s°±
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param keepAlive 单位s，0~120
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configKeepAlive:(NSInteger)keepAlive
                sucBlock:(mk_communicationSuccessBlock)sucBlock
             failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- quality of service
+ 配置服务器消息级别
 
  @param qosMode qosMode
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configQos:(mqttServerQosMode)qosMode
          sucBlock:(mk_communicationSuccessBlock)sucBlock
@@ -128,92 +128,92 @@ typedef NS_ENUM(NSInteger, mqttServerQosMode) {
  Connection mode 0: TCP,1: ssl one way,2:ssl two way
 
  @param connectMode Connection mode 0: TCP,1: ssl one way,2:ssl two way
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configConnectMode:(mqttServerConnectMode)connectMode
                  sucBlock:(mk_communicationSuccessBlock)sucBlock
               failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Config CA File
+ 配置CA证书
 
- @param caFile CA file
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param caFile CA证书
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configCAFile:(NSData *)caFile
             sucBlock:(mk_communicationSuccessBlock)sucBlock
          failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Config client certificate
+ 配置客户端证书
 
- @param cert client certificate
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param cert 客户端证书
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configClientCert:(NSData *)cert
                 sucBlock:(mk_communicationSuccessBlock)sucBlock
              failedBlock:(mk_communicationFailedBlock)failedBlock;
 /**
- Config client private key
+ 配置客户端私钥
 
- @param privateKey client private key
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param privateKey 客户端私钥
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configClientPrivateKey:(NSData *)privateKey
                       sucBlock:(mk_communicationSuccessBlock)sucBlock
                    failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Config publish topic
+ 配置设备发布主题
 
- @param publishTopic Publish Topic，1~128
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param publishTopic 发布主题,长度1~128
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configDevicePublishTopic:(NSString *)publishTopic
                         sucBlock:(mk_communicationSuccessBlock)sucBlock
                      failedBlock:(mk_communicationFailedBlock)failedBlock;
 /**
- Config subscribe topic
+ 配置设备订阅主题
 
- @param subscibeTopic Subscribe Topic ,1~128
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param subscibeTopic 订阅主题，长度1~128
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configDeviceSubscibeTopic:(NSString *)subscibeTopic
                          sucBlock:(mk_communicationSuccessBlock)sucBlock
                       failedBlock:(mk_communicationFailedBlock)failedBlock;
 /**
- The phone specifies the specific ssid WiFi network to the plug.
+ 设置联网wifi
 
- @param wifiSSID ssid， 1~100
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param wifiSSID ssid，长度 1~100
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configWifiSSID:(NSString *)wifiSSID
               sucBlock:(mk_communicationSuccessBlock)sucBlock
            failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- The phone specifies the specific ssid WiFi network to the plug.
+ 设置wifi密码
 
- @param password Wifi password, no password required wifi network, password can be blank
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param password 密码，长度 1~100
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configWifiPassword:(NSString *)password
                   sucBlock:(mk_communicationSuccessBlock)sucBlock
                failedBlock:(mk_communicationFailedBlock)failedBlock;
 
 /**
- Connect server
+ 设备发起连接服务器
 
- @param sucBlock Success callback
- @param failedBlock Failed callback
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
  */
 + (void)configDeviceConnectServerWithSucBlock:(mk_communicationSuccessBlock)sucBlock
                                   failedBlock:(mk_communicationFailedBlock)failedBlock;

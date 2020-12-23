@@ -10,8 +10,8 @@
 #import "MKMQTTServerTaskOperation.h"
 #import <MQTTClient/MQTTSessionManager.h>
 
-#ifndef mk_dispatch_main_safe
-#define mk_dispatch_main_safe(block)\
+#ifndef moko_dispatch_main_safe
+#define moko_dispatch_main_safe(block)\
     if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(dispatch_get_main_queue())) == 0) {\
         block();\
 } else {\
@@ -64,7 +64,7 @@ static dispatch_once_t onceToken;
         return;
     }
     if ([self.delegate respondsToSelector:@selector(sessionManager:didReceiveMessage:onTopic:)]) {
-        mk_dispatch_main_safe(^{[self.delegate sessionManager:manager didReceiveMessage:data onTopic:topic];});
+        moko_dispatch_main_safe(^{[self.delegate sessionManager:manager didReceiveMessage:data onTopic:topic];});
     }
 }
 
@@ -87,7 +87,7 @@ static dispatch_once_t onceToken;
     //更新当前state
     self.managerState = [self fecthSessionState:newState];
     if ([self.delegate respondsToSelector:@selector(mqttServerManagerStateChanged:)]) {
-        mk_dispatch_main_safe(^{[self.delegate mqttServerManagerStateChanged:self.managerState];});
+        moko_dispatch_main_safe(^{[self.delegate mqttServerManagerStateChanged:self.managerState];});
     }
     NSLog(@"连接状态发生改变:---%ld",(long)newState);
     if (self.managerState == MKMQTTSessionManagerStateConnected) {
@@ -228,7 +228,7 @@ static dispatch_once_t onceToken;
      failedBlock:(void (^)(NSError *error))failedBlock{
     if (!data || ![data isKindOfClass:[NSDictionary class]]) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerParamsError message:@"params error"]);
             })
         }
@@ -236,7 +236,7 @@ static dispatch_once_t onceToken;
     }
     if (!topic || topic.length == 0) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerTopicError message:@"the theme of the error to publish information"]);
             })
         }
@@ -244,7 +244,7 @@ static dispatch_once_t onceToken;
     }
     if (!self.sessionManager) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerDisconnected message:@"please connect server"]);
             })
         }
@@ -256,7 +256,7 @@ static dispatch_once_t onceToken;
                                           retain:false];
     if (msgid <= 0) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerSetParamsError message:@"set data error"]);
             })
         }
@@ -264,7 +264,7 @@ static dispatch_once_t onceToken;
     }
     MKMQTTServerTaskOperation *operation = [[MKMQTTServerTaskOperation alloc] initOperationWithID:msgid completeBlock:^(NSError *error, NSInteger operationID) {
         if (error) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 if (failedBlock) {
                     failedBlock(error);
                 }
@@ -273,13 +273,13 @@ static dispatch_once_t onceToken;
         }
         if (msgid != operationID) {
             if (failedBlock) {
-                mk_dispatch_main_safe(^{
+                moko_dispatch_main_safe(^{
                     failedBlock([self getErrorWithCode:MKServerSetParamsError message:@"set data error"]);
                 })
             }
             return;
         }
-        mk_dispatch_main_safe(^{
+        moko_dispatch_main_safe(^{
             if (sucBlock) {
                 sucBlock();
             }
@@ -292,9 +292,9 @@ static dispatch_once_t onceToken;
               topic:(NSString *)topic
            sucBlock:(void (^)(void))sucBlock
         failedBlock:(void (^)(NSError *error))failedBlock {
-    if (!data || ![data isKindOfClass:NSData.class]) {
+    if (!ValidData(data)) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerParamsError message:@"params error"]);
             })
         }
@@ -302,7 +302,7 @@ static dispatch_once_t onceToken;
     }
     if (!topic || topic.length == 0) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerTopicError message:@"the theme of the error to publish information"]);
             })
         }
@@ -310,7 +310,7 @@ static dispatch_once_t onceToken;
     }
     if (!self.sessionManager) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerDisconnected message:@"please connect server"]);
             })
         }
@@ -322,7 +322,7 @@ static dispatch_once_t onceToken;
                                           retain:false];
     if (msgid <= 0) {
         if (failedBlock) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 failedBlock([self getErrorWithCode:MKServerSetParamsError message:@"set data error"]);
             })
         }
@@ -330,7 +330,7 @@ static dispatch_once_t onceToken;
     }
     MKMQTTServerTaskOperation *operation = [[MKMQTTServerTaskOperation alloc] initOperationWithID:msgid completeBlock:^(NSError *error, NSInteger operationID) {
         if (error) {
-            mk_dispatch_main_safe(^{
+            moko_dispatch_main_safe(^{
                 if (failedBlock) {
                     failedBlock(error);
                 }
@@ -339,13 +339,13 @@ static dispatch_once_t onceToken;
         }
         if (msgid != operationID) {
             if (failedBlock) {
-                mk_dispatch_main_safe(^{
+                moko_dispatch_main_safe(^{
                     failedBlock([self getErrorWithCode:MKServerSetParamsError message:@"set data error"]);
                 })
             }
             return;
         }
-        mk_dispatch_main_safe(^{
+        moko_dispatch_main_safe(^{
             if (sucBlock) {
                 sucBlock();
             }

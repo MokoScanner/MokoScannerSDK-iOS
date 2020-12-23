@@ -166,6 +166,7 @@ static CGFloat const alertViewHeight = 230.f;
 - (UITextField *)wifiNameTextField{
     if (!_wifiNameTextField) {
         _wifiNameTextField = [MKCommonlyUIHelper configServerTextField];
+        _wifiNameTextField.keyboardType = UIKeyboardTypeDefault;
     }
     return _wifiNameTextField;
 }

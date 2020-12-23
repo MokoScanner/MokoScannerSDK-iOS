@@ -26,6 +26,14 @@ static NSString *const mk_resetFactoryKey = @"23";
 static NSString *const mk_deviceKeepAliveStatusKey = @"24";
 //设备型号
 static NSString *const mk_deviceProductModeKey = @"1a";
+//设备LED设置
+static NSString *const mk_deviceLEDSettingKey = @"1b";
+//读取过滤蓝牙原始数据规则
+static NSString *const mk_deviceRawFilterKey = @"1c";
+//读取过滤mac地址规则
+static NSString *const mk_deviceMacFilterKey = @"1d";
+//读取数据超时时长
+static NSString *const mk_deviceDataReportTimeKey = @"1e";
 
 
 #pragma mark - 接收到MQTT服务器数据时候抛出的通知
@@ -57,3 +65,11 @@ static NSString *const MKMQTTServerReceivedResetFactoryNotification = @"MKMQTTSe
 static NSString *const MKMQTTServerReceivedDeviceKeepAliveStatusNotification = @"MKMQTTServerReceivedDeviceKeepAliveStatusNotification";
 //接收到了产品型号
 static NSString *const MKMQTTServerReceivedDeviceProductModeNotification = @"MKMQTTServerReceivedDeviceProductModeNotification";
+//接收到了LED设置
+static NSString *const MKMQTTServerReceivedLEDSettingNotification = @"MKMQTTServerReceivedLEDSettingNotification";
+//接收到了过滤蓝牙原始数据规则
+static NSString *const MKMQTTServerReceivedRawFilterNotification = @"MKMQTTServerReceivedRawFilterNotification";
+//接收到了过滤蓝牙mac地址
+static NSString *const MKMQTTServerReceivedMacFilterNotification = @"MKMQTTServerReceivedMacFilterNotification";
+//接收到了读取数据超时时长
+static NSString *const MKMQTTServerReceivedDataReportTimeNotification = @"MKMQTTServerReceivedDataReportTimeNotification";

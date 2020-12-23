@@ -28,13 +28,13 @@ static NSString *const mk_communicationDataNum = @"mk_communicationDataNum";
 
 
 typedef NS_ENUM(NSInteger, mk_peripheralConnectStatus) {
-    mk_peripheralConnectStatusUnknow,                                           //Unknown state
-    mk_peripheralConnectStatusConnecting,                                       //Connecting
-    mk_peripheralConnectStatusConnected,                                        //Connect success
-    mk_peripheralConnectStatusConnectedFailed,                                  //Connect fail
-    mk_peripheralConnectStatusDisconnect,                                       //Disconnect
+    mk_peripheralConnectStatusUnknow,                                           //未知状态
+    mk_peripheralConnectStatusConnecting,                                       //正在连接
+    mk_peripheralConnectStatusConnected,                                        //连接成功
+    mk_peripheralConnectStatusConnectedFailed,                                  //连接失败
+    mk_peripheralConnectStatusDisconnect,                                       //连接断开
 };
 typedef NS_ENUM(NSInteger, mk_centralManagerState) {
-    mk_centralManagerStateUnable,                           //Unavailable
-    mk_centralManagerStateEnable,                           //Available
+    mk_centralManagerStateUnable,                           //不可用
+    mk_centralManagerStateEnable,                           //可用状态
 };

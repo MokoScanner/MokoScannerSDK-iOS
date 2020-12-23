@@ -7,10 +7,10 @@
 //
 
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "MKBLESDKDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class CBCharacteristic,CBService;
 @interface CBPeripheral (MKBLEAdd)
 
 @property (nonatomic, strong, readonly)CBCharacteristic *dataCharacteristic;

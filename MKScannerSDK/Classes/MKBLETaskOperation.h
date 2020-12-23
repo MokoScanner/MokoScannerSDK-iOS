@@ -19,17 +19,17 @@ extern NSString *const mk_dataStatusLev;
 @interface MKBLETaskOperation : NSOperation<CBPeripheralDelegate>
 
 /**
- Accept timer timeout, default is 2s.
+ 接受定时器超时时间，默认为2s
  */
 @property (nonatomic, assign)NSTimeInterval receiveTimeout;
 
 /**
- Initialize the communication thread.
+ 初始化通信线程
  
- @param operationID Current thread task ID.
- @param resetNum If need modify the total number of data that the task needs to accept according to the total number of data returned by the peripheral, YES needs, NO does not need.
- @param commandBlock send command to callback.
- @param completeBlock Data communication completion callback.
+ @param operationID 当前线程的任务ID
+ @param resetNum 是否需要根据外设返回的数据总条数来修改任务需要接受的数据总条数，YES需要，NO不需要
+ @param commandBlock 发送命令回调
+ @param completeBlock 数据通信完成回调
  @return operation
  */
 - (instancetype)initOperationWithID:(mk_taskOperationID)operationID

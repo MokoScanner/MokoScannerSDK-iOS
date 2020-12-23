@@ -64,6 +64,10 @@
                                mqttID:(NSString *)mqttID
                              sucBlock:(void (^)(void))sucBlock
                           failedBlock:(void (^)(NSError *error))failedBlock {
+    if (ValidStr(filteringName) && filteringName.length > 29) {
+        [MKMQTTServerErrorBlockAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
     if (!filteringName) {
         filteringName = @"";
     }
@@ -74,6 +78,100 @@
     }
     NSString *nameLen = [self fourLenHex:filteringName.length];
     NSString *commandData = [NSString stringWithFormat:@"%@%@%@%@",@"29",[MKMQTTSDKAdopter fetchDeviceIDMode:mqttID],nameLen,tempString];
+    [[MKMQTTServerManager sharedInstance] publishData:[MKMQTTSDKAdopter stringToData:commandData]
+                                                topic:topic
+                                             sucBlock:sucBlock
+                                          failedBlock:failedBlock];
+}
+
++ (void)configLEDSettings:(id <MKLEDSettingProtocol>)protocol
+                    topic:(NSString *)topic
+                   mqttID:(NSString *)mqttID
+                 sucBlock:(void (^)(void))sucBlock
+              failedBlock:(void (^)(NSError *error))failedBlock {
+    if (!protocol || ![protocol conformsToProtocol:@protocol(MKLEDSettingProtocol)]) {
+        [MKMQTTServerErrorBlockAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *serverConnectingIson = (protocol.serverConnectingIson ? @"01" : @"00");
+    NSString *serverConnectedIson = (protocol.serverConnectedIson ? @"01" : @"00");
+    NSString *bleBroadcastIson = (protocol.bleBroadcastIson ? @"01" : @"00");
+    NSString *bleConnectingIson = (protocol.bleConnectingIson ? @"01" : @"00");
+    NSString *tempString = [NSString stringWithFormat:@"%@%@%@%@",serverConnectingIson,serverConnectedIson,bleBroadcastIson,bleConnectingIson];
+    NSString *commandData = [NSString stringWithFormat:@"%@%@%@%@",@"2d",[MKMQTTSDKAdopter fetchDeviceIDMode:mqttID],@"0004",tempString];
+    [[MKMQTTServerManager sharedInstance] publishData:[MKMQTTSDKAdopter stringToData:commandData]
+                                                topic:topic
+                                             sucBlock:sucBlock
+                                          failedBlock:failedBlock];
+}
+
++ (void)configDeviceScanFilteringMac:(NSString *)macAddress
+                               topic:(NSString *)topic
+                              mqttID:(NSString *)mqttID
+                            sucBlock:(void (^)(void))sucBlock
+                         failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandData = [NSString stringWithFormat:@"%@%@%@",@"2f",[MKMQTTSDKAdopter fetchDeviceIDMode:mqttID],@"0000"];
+    if (ValidStr(macAddress)) {
+        commandData = [NSString stringWithFormat:@"%@%@%@%@",@"2f",[MKMQTTSDKAdopter fetchDeviceIDMode:mqttID],@"0006",macAddress];
+    }
+    [[MKMQTTServerManager sharedInstance] publishData:[MKMQTTSDKAdopter stringToData:commandData]
+                                                topic:topic
+                                             sucBlock:sucBlock
+                                          failedBlock:failedBlock];
+}
+
++ (void)configRawFilterConditions:(NSArray <id <MKRawFilterProtocol>>*)conditions
+                            topic:(NSString *)topic
+                           mqttID:(NSString *)mqttID
+                         sucBlock:(void (^)(void))sucBlock
+                      failedBlock:(void (^)(NSError *error))failedBlock {
+    if (conditions.count > 5) {
+        [MKMQTTServerErrorBlockAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *contentData = @"";
+    for (id <MKRawFilterProtocol>protocol in conditions) {
+        if (![self isConfirmRawFilterProtocol:protocol]) {
+            [MKMQTTServerErrorBlockAdopter operationParamsErrorBlock:failedBlock];
+            return;
+        }
+        NSString *minIndex = [NSString stringWithFormat:@"%1lx",(unsigned long)protocol.minIndex];
+        if (minIndex.length == 1) {
+            minIndex = [@"0" stringByAppendingString:minIndex];
+        }
+        NSString *maxIndex = [NSString stringWithFormat:@"%1lx",(unsigned long)protocol.maxIndex];
+        if (maxIndex.length == 1) {
+            maxIndex = [@"0" stringByAppendingString:maxIndex];
+        }
+        NSString *lenString = [NSString stringWithFormat:@"%1lx",(unsigned long)(protocol.rawData.length / 2 + 3)];
+        if (lenString.length == 1) {
+            lenString = [@"0" stringByAppendingString:lenString];
+        }
+        NSString *conditionString = [NSString stringWithFormat:@"%@%@%@%@%@",lenString,protocol.dataType,minIndex,maxIndex,protocol.rawData];
+        contentData = [contentData stringByAppendingString:conditionString];
+    }
+    NSString *contenLen = [self fourLenHex:(contentData.length / 2)];
+    NSString *commandData = [NSString stringWithFormat:@"%@%@%@%@",@"2e",[MKMQTTSDKAdopter fetchDeviceIDMode:mqttID],contenLen,contentData];
+    [[MKMQTTServerManager sharedInstance] publishData:[MKMQTTSDKAdopter stringToData:commandData]
+                                                topic:topic
+                                             sucBlock:sucBlock
+                                          failedBlock:failedBlock];
+}
+
++ (void)configDeviceDataReportSettingTime:(NSInteger)time
+                                    topic:(NSString *)topic
+                                   mqttID:(NSString *)mqttID
+                                 sucBlock:(void (^)(void))sucBlock
+                              failedBlock:(void (^)(NSError *error))failedBlock {
+    if (time < 0 || time > 60) {
+        [MKMQTTServerErrorBlockAdopter operationParamsErrorBlock:failedBlock];
+        return;
+    }
+    NSString *timeString = [NSString stringWithFormat:@"%1lx",(unsigned long)time];
+    if (timeString.length == 1) {
+        timeString = [@"0" stringByAppendingString:timeString];
+    }
+    NSString *commandData = [NSString stringWithFormat:@"%@%@%@%@",@"30",[MKMQTTSDKAdopter fetchDeviceIDMode:mqttID],@"0001",timeString];
     [[MKMQTTServerManager sharedInstance] publishData:[MKMQTTSDKAdopter stringToData:commandData]
                                                 topic:topic
                                              sucBlock:sucBlock
@@ -194,6 +292,52 @@
         lenString = [@"0" stringByAppendingString:lenString];
     }
     return lenString;
+}
+
++ (BOOL)isConfirmRawFilterProtocol:(id <MKRawFilterProtocol>)protocol {
+    if (![protocol conformsToProtocol:@protocol(MKRawFilterProtocol)]) {
+        return NO;
+    }
+    if (!ValidStr(protocol.dataType) || protocol.dataType.length != 2 || ![protocol.dataType regularExpressions:isHexadecimal]) {
+        return NO;
+    }
+    NSArray *typeList = [self dataTypeList];
+    if (![typeList containsObject:[protocol.dataType uppercaseString]]) {
+        return NO;
+    }
+    if (protocol.minIndex == 0 && protocol.maxIndex == 0) {
+        if (!ValidStr(protocol.rawData) || protocol.rawData.length > 58 || ![protocol.rawData regularExpressions:isHexadecimal] || (protocol.rawData.length % 2 != 0)) {
+            return NO;
+        }
+        return YES;
+    }
+    if (protocol.minIndex < 0 || protocol.minIndex > 29 || protocol.maxIndex < 0 || protocol.maxIndex > 29) {
+        return NO;
+    }
+    
+    if (protocol.maxIndex < protocol.minIndex) {
+        return NO;
+    }
+    if (!ValidStr(protocol.rawData) || protocol.rawData.length > 58 || ![protocol.rawData regularExpressions:isHexadecimal]) {
+        return NO;
+    }
+    NSInteger totalLen = (protocol.maxIndex - protocol.minIndex + 1) * 2;
+    if (protocol.rawData.length != totalLen) {
+        return NO;
+    }
+    return YES;
+}
+
++ (NSArray *)dataTypeList {
+    return @[@"01",@"02",@"03",@"04",@"05",
+             @"06",@"07",@"08",@"09",@"0A",
+             @"0D",@"0E",@"0F",@"10",@"11",
+             @"12",@"14",@"15",@"16",@"17",
+             @"18",@"19",@"1A",@"1B",@"1C",
+             @"1D",@"1E",@"1F",@"20",@"21",
+             @"22",@"23",@"24",@"25",@"26",
+             @"27",@"28",@"29",@"2A",@"2B",
+             @"2C",@"2D",@"3D",@"FF"];
 }
 
 #pragma mark - ota private method

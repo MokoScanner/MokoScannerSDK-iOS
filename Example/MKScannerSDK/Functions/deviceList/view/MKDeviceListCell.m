@@ -47,6 +47,8 @@ static CGFloat const deleteButtonWidth = 75.0f;
  */
 @property (nonatomic, assign)BOOL shouldSetFrame;
 
+@property (nonatomic, strong)UIView *lineView;
+
 @end
 
 @implementation MKDeviceListCell
@@ -68,6 +70,7 @@ static CGFloat const deleteButtonWidth = 75.0f;
         [self.contentPanel addSubview:self.deviceNameLabel];
         [self.contentPanel addSubview:self.deviceStateLabel];
         [self.contentPanel addSubview:self.nextIcon];
+        [self.contentView addSubview:self.lineView];
         [self addSwipeGestureRecognizer];
     }
     return self;
@@ -78,7 +81,12 @@ static CGFloat const deleteButtonWidth = 75.0f;
     [super layoutSubviews];
     [self.contentPanel setFrame:self.contentView.bounds];
     [self.backGroundView setFrame:self.contentView.bounds];
-    
+    [self.lineView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(15.f);
+        make.right.mas_equalTo(-15.f);
+        make.bottom.mas_equalTo(0);
+        make.height.mas_equalTo(CUTTING_LINE_HEIGHT);
+    }];
     [self.deviceIcon mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15.f);
         make.width.mas_equalTo(deviceIconWidth);
@@ -282,6 +290,14 @@ static CGFloat const deleteButtonWidth = 75.0f;
         _nextIcon.image = LOADIMAGE(@"rightNextIcon", @"png");
     }
     return _nextIcon;
+}
+
+- (UIView *)lineView {
+    if (!_lineView) {
+        _lineView = [[UIView alloc] init];
+        _lineView.backgroundColor = CUTTING_LINE_COLOR;
+    }
+    return _lineView;
 }
 
 @end

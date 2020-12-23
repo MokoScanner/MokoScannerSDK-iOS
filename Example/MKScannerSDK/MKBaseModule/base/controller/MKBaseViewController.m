@@ -180,7 +180,6 @@
         //  *********** 重点 ***********   //
         NSString *curBundleName = curBundle.infoDictionary[@"CFBundleName"];
         NSString *curBundleDirectory = [NSString stringWithFormat:@"%@.bundle", curBundleName];
-        NSString *normalImgPath = [curBundle pathForResource:@"navigation_back_button_white.png" ofType:nil inDirectory:curBundleDirectory];
         
         [_leftButton setImage:LOADICON(MKBASEBUNDLUEPATH, @"navigation_back_button_white.png")
                      forState:UIControlStateNormal];

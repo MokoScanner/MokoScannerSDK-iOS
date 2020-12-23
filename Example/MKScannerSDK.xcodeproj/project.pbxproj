@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0012D1B023A0CA3B00887B10 /* MKMQTTServerTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012D1AC23A0CA3B00887B10 /* MKMQTTServerTaskOperation.m */; };
-		0012D1B123A0CA3B00887B10 /* MKMQTTServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012D1AF23A0CA3B00887B10 /* MKMQTTServerManager.m */; };
 		0050D4E4239E4C9000AF8510 /* scanRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0050D389239E4C8E00AF8510 /* scanRefresh@2x.png */; };
 		0050D4E5239E4C9000AF8510 /* scanRefresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0050D38A239E4C8E00AF8510 /* scanRefresh@3x.png */; };
 		0050D4E6239E4C9000AF8510 /* rightNextIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0050D38B239E4C8E00AF8510 /* rightNextIcon@3x.png */; };
@@ -100,7 +98,6 @@
 		0050D53C239E4C9000AF8510 /* MKDeviceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D3F0239E4C8E00AF8510 /* MKDeviceListCell.m */; };
 		0050D53D239E4C9000AF8510 /* MKAddDeviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D3F3239E4C8E00AF8510 /* MKAddDeviceView.m */; };
 		0050D53E239E4C9000AF8510 /* MKDeviceMainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D3F6239E4C8E00AF8510 /* MKDeviceMainPageController.m */; };
-		0050D53F239E4C9000AF8510 /* MKEditFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D3F9239E4C8E00AF8510 /* MKEditFilterController.m */; };
 		0050D540239E4C9000AF8510 /* MKDeviceMainPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D3FD239E4C8E00AF8510 /* MKDeviceMainPageCell.m */; };
 		0050D541239E4C9000AF8510 /* MKDeviceMainPageIntervalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D3FE239E4C8E00AF8510 /* MKDeviceMainPageIntervalView.m */; };
 		0050D542239E4C9000AF8510 /* MKDeviceInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D403239E4C8E00AF8510 /* MKDeviceInformationController.m */; };
@@ -186,6 +183,19 @@
 		0050D594239E4C9100AF8510 /* MKMQTTServerDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D4DD239E4C9000AF8510 /* MKMQTTServerDataManager.m */; };
 		0050D595239E4C9100AF8510 /* MKConfigServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D4DF239E4C9000AF8510 /* MKConfigServerModel.m */; };
 		0050D596239E4C9100AF8510 /* MKMQTTSDKAdopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050D4E3239E4C9000AF8510 /* MKMQTTSDKAdopter.m */; };
+		0054CBE92593190C00616EB2 /* MKMQTTServerTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBE52593190C00616EB2 /* MKMQTTServerTaskOperation.m */; };
+		0054CBEA2593190C00616EB2 /* MKMQTTServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBE82593190C00616EB2 /* MKMQTTServerManager.m */; };
+		0054CBEF259319AB00616EB2 /* MKFilterConditionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBEE259319AB00616EB2 /* MKFilterConditionsController.m */; };
+		0054CBF8259319C400616EB2 /* MKFilterRawDataCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBF3259319C400616EB2 /* MKFilterRawDataCellModel.m */; };
+		0054CBF9259319C400616EB2 /* MKFilterNormalCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBF4259319C400616EB2 /* MKFilterNormalCellModel.m */; };
+		0054CBFA259319C400616EB2 /* MKFilterDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBF6259319C400616EB2 /* MKFilterDataModel.m */; };
+		0054CC03259319D100616EB2 /* MKFilterRawDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBFE259319D000616EB2 /* MKFilterRawDataCell.m */; };
+		0054CC04259319D100616EB2 /* MKFilterRawMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CBFF259319D000616EB2 /* MKFilterRawMsgCell.m */; };
+		0054CC05259319D100616EB2 /* MKFilterNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CC00259319D100616EB2 /* MKFilterNormalCell.m */; };
+		0054CC0E259319EE00616EB2 /* MKLEDSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CC0B259319EE00616EB2 /* MKLEDSettingController.m */; };
+		0054CC1725931A0500616EB2 /* MKDataReportSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CC1325931A0500616EB2 /* MKDataReportSettingController.m */; };
+		0054CC1F25931A4700616EB2 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CC1B25931A4700616EB2 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0054CC2025931A4700616EB2 /* twlt_uuid_util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0054CC1C25931A4700616EB2 /* twlt_uuid_util.m */; };
 		0059056A239F9DF100A6E79C /* MKDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590510239F9DF100A6E79C /* MKDateFormatter.m */; };
 		0059056B239F9DF100A6E79C /* MKAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590513239F9DF100A6E79C /* MKAttributedString.m */; };
 		0059056C239F9DF100A6E79C /* MKHudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00590516239F9DF100A6E79C /* MKHudManager.m */; };
@@ -247,10 +257,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0012D1AC23A0CA3B00887B10 /* MKMQTTServerTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerTaskOperation.m; sourceTree = "<group>"; };
-		0012D1AD23A0CA3B00887B10 /* MKMQTTServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerManager.h; sourceTree = "<group>"; };
-		0012D1AE23A0CA3B00887B10 /* MKMQTTServerTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerTaskOperation.h; sourceTree = "<group>"; };
-		0012D1AF23A0CA3B00887B10 /* MKMQTTServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerManager.m; sourceTree = "<group>"; };
 		0050D389239E4C8E00AF8510 /* scanRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanRefresh@2x.png"; sourceTree = "<group>"; };
 		0050D38A239E4C8E00AF8510 /* scanRefresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanRefresh@3x.png"; sourceTree = "<group>"; };
 		0050D38B239E4C8E00AF8510 /* rightNextIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightNextIcon@3x.png"; sourceTree = "<group>"; };
@@ -346,9 +352,7 @@
 		0050D3F2239E4C8E00AF8510 /* MKDeviceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDeviceListCell.h; sourceTree = "<group>"; };
 		0050D3F3239E4C8E00AF8510 /* MKAddDeviceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAddDeviceView.m; sourceTree = "<group>"; };
 		0050D3F6239E4C8E00AF8510 /* MKDeviceMainPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDeviceMainPageController.m; sourceTree = "<group>"; };
-		0050D3F7239E4C8E00AF8510 /* MKEditFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKEditFilterController.h; sourceTree = "<group>"; };
 		0050D3F8239E4C8E00AF8510 /* MKDeviceMainPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDeviceMainPageController.h; sourceTree = "<group>"; };
-		0050D3F9239E4C8E00AF8510 /* MKEditFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKEditFilterController.m; sourceTree = "<group>"; };
 		0050D3FC239E4C8E00AF8510 /* MKDeviceMainPageIntervalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDeviceMainPageIntervalView.h; sourceTree = "<group>"; };
 		0050D3FD239E4C8E00AF8510 /* MKDeviceMainPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDeviceMainPageCell.m; sourceTree = "<group>"; };
 		0050D3FE239E4C8E00AF8510 /* MKDeviceMainPageIntervalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDeviceMainPageIntervalView.m; sourceTree = "<group>"; };
@@ -522,6 +526,32 @@
 		0050D4E1239E4C9000AF8510 /* MKMQTTServerDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerDataManager.h; sourceTree = "<group>"; };
 		0050D4E2239E4C9000AF8510 /* MKMqttServerIntefaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMqttServerIntefaces.h; sourceTree = "<group>"; };
 		0050D4E3239E4C9000AF8510 /* MKMQTTSDKAdopter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTSDKAdopter.m; sourceTree = "<group>"; };
+		0054CBE52593190C00616EB2 /* MKMQTTServerTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerTaskOperation.m; sourceTree = "<group>"; };
+		0054CBE62593190C00616EB2 /* MKMQTTServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerManager.h; sourceTree = "<group>"; };
+		0054CBE72593190C00616EB2 /* MKMQTTServerTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerTaskOperation.h; sourceTree = "<group>"; };
+		0054CBE82593190C00616EB2 /* MKMQTTServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerManager.m; sourceTree = "<group>"; };
+		0054CBED259319AA00616EB2 /* MKFilterConditionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFilterConditionsController.h; sourceTree = "<group>"; };
+		0054CBEE259319AB00616EB2 /* MKFilterConditionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFilterConditionsController.m; sourceTree = "<group>"; };
+		0054CBF2259319C400616EB2 /* MKFilterRawDataCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFilterRawDataCellModel.h; sourceTree = "<group>"; };
+		0054CBF3259319C400616EB2 /* MKFilterRawDataCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFilterRawDataCellModel.m; sourceTree = "<group>"; };
+		0054CBF4259319C400616EB2 /* MKFilterNormalCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFilterNormalCellModel.m; sourceTree = "<group>"; };
+		0054CBF5259319C400616EB2 /* MKFilterDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFilterDataModel.h; sourceTree = "<group>"; };
+		0054CBF6259319C400616EB2 /* MKFilterDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFilterDataModel.m; sourceTree = "<group>"; };
+		0054CBF7259319C400616EB2 /* MKFilterNormalCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFilterNormalCellModel.h; sourceTree = "<group>"; };
+		0054CBFD259319D000616EB2 /* MKFilterRawDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFilterRawDataCell.h; sourceTree = "<group>"; };
+		0054CBFE259319D000616EB2 /* MKFilterRawDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFilterRawDataCell.m; sourceTree = "<group>"; };
+		0054CBFF259319D000616EB2 /* MKFilterRawMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFilterRawMsgCell.m; sourceTree = "<group>"; };
+		0054CC00259319D100616EB2 /* MKFilterNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFilterNormalCell.m; sourceTree = "<group>"; };
+		0054CC01259319D100616EB2 /* MKFilterNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFilterNormalCell.h; sourceTree = "<group>"; };
+		0054CC02259319D100616EB2 /* MKFilterRawMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFilterRawMsgCell.h; sourceTree = "<group>"; };
+		0054CC0A259319EE00616EB2 /* MKLEDSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLEDSettingController.h; sourceTree = "<group>"; };
+		0054CC0B259319EE00616EB2 /* MKLEDSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLEDSettingController.m; sourceTree = "<group>"; };
+		0054CC1325931A0500616EB2 /* MKDataReportSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataReportSettingController.m; sourceTree = "<group>"; };
+		0054CC1425931A0500616EB2 /* MKDataReportSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataReportSettingController.h; sourceTree = "<group>"; };
+		0054CC1B25931A4700616EB2 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		0054CC1C25931A4700616EB2 /* twlt_uuid_util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twlt_uuid_util.m; sourceTree = "<group>"; };
+		0054CC1D25931A4700616EB2 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		0054CC1E25931A4700616EB2 /* twlt_uuid_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twlt_uuid_util.h; sourceTree = "<group>"; };
 		0059050F239F9DF100A6E79C /* MKDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDateFormatter.h; sourceTree = "<group>"; };
 		00590510239F9DF100A6E79C /* MKDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDateFormatter.m; sourceTree = "<group>"; };
 		00590512239F9DF100A6E79C /* MKAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAttributedString.h; sourceTree = "<group>"; };
@@ -642,17 +672,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0012D1AB23A0CA3B00887B10 /* MKSDKForMqttServer */ = {
-			isa = PBXGroup;
-			children = (
-				0012D1AC23A0CA3B00887B10 /* MKMQTTServerTaskOperation.m */,
-				0012D1AD23A0CA3B00887B10 /* MKMQTTServerManager.h */,
-				0012D1AE23A0CA3B00887B10 /* MKMQTTServerTaskOperation.h */,
-				0012D1AF23A0CA3B00887B10 /* MKMQTTServerManager.m */,
-			);
-			path = MKSDKForMqttServer;
-			sourceTree = "<group>";
-		};
 		0050D387239E4C8E00AF8510 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,6 +832,8 @@
 		0050D3E6239E4C8E00AF8510 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				0054CC1125931A0500616EB2 /* dataReport */,
+				0054CC08259319EE00616EB2 /* ledSetting */,
 				0050D3E7239E4C8E00AF8510 /* saveDevice */,
 				0050D3EB239E4C8E00AF8510 /* deviceList */,
 				0050D3F4239E4C8E00AF8510 /* deviceMainPage */,
@@ -887,10 +908,10 @@
 		0050D3F5239E4C8E00AF8510 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0054CBED259319AA00616EB2 /* MKFilterConditionsController.h */,
+				0054CBEE259319AB00616EB2 /* MKFilterConditionsController.m */,
 				0050D3F6239E4C8E00AF8510 /* MKDeviceMainPageController.m */,
-				0050D3F7239E4C8E00AF8510 /* MKEditFilterController.h */,
 				0050D3F8239E4C8E00AF8510 /* MKDeviceMainPageController.h */,
-				0050D3F9239E4C8E00AF8510 /* MKEditFilterController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -898,6 +919,12 @@
 		0050D3FA239E4C8E00AF8510 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0054CBF5259319C400616EB2 /* MKFilterDataModel.h */,
+				0054CBF6259319C400616EB2 /* MKFilterDataModel.m */,
+				0054CBF7259319C400616EB2 /* MKFilterNormalCellModel.h */,
+				0054CBF4259319C400616EB2 /* MKFilterNormalCellModel.m */,
+				0054CBF2259319C400616EB2 /* MKFilterRawDataCellModel.h */,
+				0054CBF3259319C400616EB2 /* MKFilterRawDataCellModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -905,6 +932,12 @@
 		0050D3FB239E4C8E00AF8510 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0054CC01259319D100616EB2 /* MKFilterNormalCell.h */,
+				0054CC00259319D100616EB2 /* MKFilterNormalCell.m */,
+				0054CBFD259319D000616EB2 /* MKFilterRawDataCell.h */,
+				0054CBFE259319D000616EB2 /* MKFilterRawDataCell.m */,
+				0054CC02259319D100616EB2 /* MKFilterRawMsgCell.h */,
+				0054CBFF259319D000616EB2 /* MKFilterRawMsgCell.m */,
 				0050D3FC239E4C8E00AF8510 /* MKDeviceMainPageIntervalView.h */,
 				0050D3FD239E4C8E00AF8510 /* MKDeviceMainPageCell.m */,
 				0050D3FE239E4C8E00AF8510 /* MKDeviceMainPageIntervalView.m */,
@@ -1389,6 +1422,7 @@
 		0050D4B3239E4C8F00AF8510 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0054CC1A25931A4700616EB2 /* SFHFKeychainUtils */,
 				0050D4B4239E4C8F00AF8510 /* NetworkManager */,
 				0050D4BC239E4C8F00AF8510 /* MKSlider */,
 				0050D4C5239E4C8F00AF8510 /* DataBaseManager */,
@@ -1477,7 +1511,7 @@
 		0050D4D4239E4C9000AF8510 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				0012D1AB23A0CA3B00887B10 /* MKSDKForMqttServer */,
+				0054CBE42593190C00616EB2 /* MKSDKForMqttServer */,
 				0050D4D5239E4C9000AF8510 /* interface */,
 				0050D4DC239E4C9000AF8510 /* MKConfigServerModel.h */,
 				0050D4DD239E4C9000AF8510 /* MKMQTTServerDataManager.m */,
@@ -1502,6 +1536,94 @@
 				0050D4DB239E4C9000AF8510 /* MKMQTTServerInterface+MKConfig.h */,
 			);
 			path = interface;
+			sourceTree = "<group>";
+		};
+		0054CBE42593190C00616EB2 /* MKSDKForMqttServer */ = {
+			isa = PBXGroup;
+			children = (
+				0054CBE52593190C00616EB2 /* MKMQTTServerTaskOperation.m */,
+				0054CBE62593190C00616EB2 /* MKMQTTServerManager.h */,
+				0054CBE72593190C00616EB2 /* MKMQTTServerTaskOperation.h */,
+				0054CBE82593190C00616EB2 /* MKMQTTServerManager.m */,
+			);
+			path = MKSDKForMqttServer;
+			sourceTree = "<group>";
+		};
+		0054CC08259319EE00616EB2 /* ledSetting */ = {
+			isa = PBXGroup;
+			children = (
+				0054CC09259319EE00616EB2 /* controller */,
+				0054CC0C259319EE00616EB2 /* model */,
+				0054CC0D259319EE00616EB2 /* view */,
+			);
+			path = ledSetting;
+			sourceTree = "<group>";
+		};
+		0054CC09259319EE00616EB2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0054CC0A259319EE00616EB2 /* MKLEDSettingController.h */,
+				0054CC0B259319EE00616EB2 /* MKLEDSettingController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0054CC0C259319EE00616EB2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0054CC0D259319EE00616EB2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0054CC1125931A0500616EB2 /* dataReport */ = {
+			isa = PBXGroup;
+			children = (
+				0054CC1225931A0500616EB2 /* controller */,
+				0054CC1525931A0500616EB2 /* model */,
+				0054CC1625931A0500616EB2 /* view */,
+			);
+			path = dataReport;
+			sourceTree = "<group>";
+		};
+		0054CC1225931A0500616EB2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0054CC1325931A0500616EB2 /* MKDataReportSettingController.m */,
+				0054CC1425931A0500616EB2 /* MKDataReportSettingController.h */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0054CC1525931A0500616EB2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0054CC1625931A0500616EB2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0054CC1A25931A4700616EB2 /* SFHFKeychainUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0054CC1B25931A4700616EB2 /* SFHFKeychainUtils.m */,
+				0054CC1C25931A4700616EB2 /* twlt_uuid_util.m */,
+				0054CC1D25931A4700616EB2 /* SFHFKeychainUtils.h */,
+				0054CC1E25931A4700616EB2 /* twlt_uuid_util.h */,
+			);
+			path = SFHFKeychainUtils;
 			sourceTree = "<group>";
 		};
 		0059050C239F9DF100A6E79C /* MKBaseModule */ = {
@@ -1896,7 +2018,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MK;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "aadyx2007@163.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
@@ -1909,10 +2031,9 @@
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "MKScannerSDK" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -2105,7 +2226,9 @@
 				0050D542239E4C9000AF8510 /* MKDeviceInformationController.m in Sources */,
 				0050D551239E4C9000AF8510 /* MKConfigServerHostCell.m in Sources */,
 				0050D592239E4C9100AF8510 /* MKMQTTServerInterface+MKConfig.m in Sources */,
+				0054CC1F25931A4700616EB2 /* SFHFKeychainUtils.m in Sources */,
 				0050D564239E4C9100AF8510 /* MKConnectDeviceView.m in Sources */,
+				0054CBFA259319C400616EB2 /* MKFilterDataModel.m in Sources */,
 				00590573239F9DF100A6E79C /* MKHaveRefreshCollectionView.m in Sources */,
 				0050D560239E4C9100AF8510 /* MKAddDeviceController.m in Sources */,
 				0050D563239E4C9100AF8510 /* MKConnectDeviceWifiView.m in Sources */,
@@ -2123,8 +2246,9 @@
 				0050D54D239E4C9000AF8510 /* MKConfigServerSSLCertCell.m in Sources */,
 				0050D541239E4C9000AF8510 /* MKDeviceMainPageIntervalView.m in Sources */,
 				0050D57B239E4C9100AF8510 /* EasyShowUtils.m in Sources */,
+				0054CBF9259319C400616EB2 /* MKFilterNormalCellModel.m in Sources */,
 				0050D56D239E4C9100AF8510 /* EasyTextGlobalConfig.m in Sources */,
-				0012D1B023A0CA3B00887B10 /* MKMQTTServerTaskOperation.m in Sources */,
+				0054CBE92593190C00616EB2 /* MKMQTTServerTaskOperation.m in Sources */,
 				0050D577239E4C9100AF8510 /* EasyAlertView.m in Sources */,
 				0059057F239F9DF200A6E79C /* UIButton+MKCategoryModule.m in Sources */,
 				0050D574239E4C9100AF8510 /* EasyEmptyTypes.m in Sources */,
@@ -2133,11 +2257,14 @@
 				0050D540239E4C9000AF8510 /* MKDeviceMainPageCell.m in Sources */,
 				0059056C239F9DF100A6E79C /* MKHudManager.m in Sources */,
 				0050D571239E4C9100AF8510 /* EasyEmptyView.m in Sources */,
+				0054CC05259319D100616EB2 /* MKFilterNormalCell.m in Sources */,
 				0050D57E239E4C9100AF8510 /* EasyLodingTypes.m in Sources */,
+				0054CBEF259319AB00616EB2 /* MKFilterConditionsController.m in Sources */,
 				0050D590239E4C9100AF8510 /* MKBaseCell.m in Sources */,
+				0054CC1725931A0500616EB2 /* MKDataReportSettingController.m in Sources */,
 				0050D549239E4C9000AF8510 /* MKConfigServerSSLCertFileManager.m in Sources */,
 				0050D562239E4C9100AF8510 /* MKAddDeviceDataManager.m in Sources */,
-				0012D1B123A0CA3B00887B10 /* MKMQTTServerManager.m in Sources */,
+				0054CBEA2593190C00616EB2 /* MKMQTTServerManager.m in Sources */,
 				0050D543239E4C9000AF8510 /* MKDeviceInformationModel.m in Sources */,
 				0050D566239E4C9100AF8510 /* MKDeviceServerController.m in Sources */,
 				0050D54F239E4C9000AF8510 /* MKConfigServerQosCell.m in Sources */,
@@ -2166,10 +2293,12 @@
 				0050D569239E4C9100AF8510 /* MKAddDeviceCenter.m in Sources */,
 				0050D570239E4C9100AF8510 /* EasyEmptyConfig.m in Sources */,
 				00590576239F9DF100A6E79C /* UITextField+MKCategoryModule.m in Sources */,
+				0054CBF8259319C400616EB2 /* MKFilterRawDataCellModel.m in Sources */,
 				0050D53C239E4C9000AF8510 /* MKDeviceListCell.m in Sources */,
+				0054CC03259319D100616EB2 /* MKFilterRawDataCell.m in Sources */,
 				0050D55E239E4C9100AF8510 /* MKScanDeviceModel.m in Sources */,
 				0050D575239E4C9100AF8510 /* EasyAlertTypes.m in Sources */,
-				0050D53F239E4C9000AF8510 /* MKEditFilterController.m in Sources */,
+				0054CC04259319D100616EB2 /* MKFilterRawMsgCell.m in Sources */,
 				0050D582239E4C9100AF8510 /* MKConnectAlertView.m in Sources */,
 				0050D58D239E4C9100AF8510 /* MKDeviceServerConfigDatabase.m in Sources */,
 				0059057E239F9DF200A6E79C /* UIView+MKCategoryModule.m in Sources */,
@@ -2184,6 +2313,7 @@
 				0050D53A239E4C9000AF8510 /* MKSaveDeviceNameController.m in Sources */,
 				0050D57F239E4C9100AF8510 /* EasyLodingView.m in Sources */,
 				0050D55D239E4C9100AF8510 /* MKScanDeviceController.m in Sources */,
+				0054CC2025931A4700616EB2 /* twlt_uuid_util.m in Sources */,
 				0050D53B239E4C9000AF8510 /* MKDeviceListController.m in Sources */,
 				00590577239F9DF100A6E79C /* UIScrollView+MKCategoryModule.m in Sources */,
 				0050D572239E4C9100AF8510 /* EasyEmptyPart.m in Sources */,
@@ -2202,6 +2332,7 @@
 				0050D54E239E4C9000AF8510 /* MKConfigServerPickView.m in Sources */,
 				0059056F239F9DF100A6E79C /* MKProgressView.m in Sources */,
 				0050D55F239E4C9100AF8510 /* MKScanDeviceCell.m in Sources */,
+				0054CC0E259319EE00616EB2 /* MKLEDSettingController.m in Sources */,
 				0050D54B239E4C9000AF8510 /* MKConfigServerConnectModeCell.m in Sources */,
 				0050D558239E4C9000AF8510 /* MKUpdateFirmwareTypeCell.m in Sources */,
 				0050D550239E4C9000AF8510 /* MKConfigServerPortCell.m in Sources */,
@@ -2285,6 +2416,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2309,7 +2441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2339,6 +2471,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2356,7 +2489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2373,7 +2506,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MKScannerSDK/MKScannerSDK-Prefix.pch";
 				INFOPLIST_FILE = "MKScannerSDK/MKScannerSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2393,7 +2526,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MKScannerSDK/MKScannerSDK-Prefix.pch";
 				INFOPLIST_FILE = "MKScannerSDK/MKScannerSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

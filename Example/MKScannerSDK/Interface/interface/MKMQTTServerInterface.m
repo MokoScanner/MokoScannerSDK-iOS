@@ -133,6 +133,50 @@
                        failedBlock:failedBlock];
 }
 
++ (void)readDeviceLEDSettingWithTopic:(NSString *)topic
+                               mqttID:(NSString *)mqttID
+                             sucBlock:(void (^)(void))sucBlock
+                          failedBlock:(void (^)(NSError *error))failedBlock {
+    [self publishReadDataWithTopic:topic
+                            header:@"1b"
+                            mqttID:mqttID
+                          sucBlock:sucBlock
+                       failedBlock:failedBlock];
+}
+
++ (void)readDeviceRawFilterDataWithTopic:(NSString *)topic
+                                  mqttID:(NSString *)mqttID
+                                sucBlock:(void (^)(void))sucBlock
+                             failedBlock:(void (^)(NSError *error))failedBlock {
+    [self publishReadDataWithTopic:topic
+                            header:@"1c"
+                            mqttID:mqttID
+                          sucBlock:sucBlock
+                       failedBlock:failedBlock];
+}
+
++ (void)readDeviceMacFilterDataWithTopic:(NSString *)topic
+                                  mqttID:(NSString *)mqttID
+                                sucBlock:(void (^)(void))sucBlock
+                             failedBlock:(void (^)(NSError *error))failedBlock {
+    [self publishReadDataWithTopic:topic
+                            header:@"1d"
+                            mqttID:mqttID
+                          sucBlock:sucBlock
+                       failedBlock:failedBlock];
+}
+
++ (void)readDeviceDataReportSettingTimeWithTopic:(NSString *)topic
+                                          mqttID:(NSString *)mqttID
+                                        sucBlock:(void (^)(void))sucBlock
+                                     failedBlock:(void (^)(NSError *error))failedBlock {
+    [self publishReadDataWithTopic:topic
+                            header:@"1e"
+                            mqttID:mqttID
+                          sucBlock:sucBlock
+                       failedBlock:failedBlock];
+}
+
 #pragma mark - update
 
 #pragma mark - private method

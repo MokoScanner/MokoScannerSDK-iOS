@@ -149,6 +149,26 @@ NSString *const MKMQTTSessionManagerStateChangedNotification = @"MKMQTTSessionMa
         [self parseResetFactory:[data subdataWithRange:NSMakeRange(1, data.length - 1)] topic:topic];
         return;
     }
+    if ([function isEqualToString:mk_deviceLEDSettingKey]) {
+        //设备LED设置
+        [self parseLEDSetting:[data subdataWithRange:NSMakeRange(1, data.length - 1)] topic:topic];
+        return;
+    }
+    if ([function isEqualToString:mk_deviceRawFilterKey]) {
+        //过滤蓝牙原始数据规则
+        [self parseRawDataFilterConditions:[data subdataWithRange:NSMakeRange(1, data.length - 1)] topic:topic];
+        return;
+    }
+    if ([function isEqualToString:mk_deviceMacFilterKey]) {
+        //读取过滤mac地址规则
+        [self parseMacFilter:[data subdataWithRange:NSMakeRange(1, data.length - 1)] topic:topic];
+        return;
+    }
+    if ([function isEqualToString:mk_deviceDataReportTimeKey]) {
+        //读取数据超时时长
+        [self parseDataReportTime:[data subdataWithRange:NSMakeRange(1, data.length - 1)] topic:topic];
+        return;
+    }
 }
 
 #pragma mark - event method
@@ -604,6 +624,136 @@ NSString *const MKMQTTSessionManagerStateChangedNotification = @"MKMQTTSessionMa
         @"data":@{},
     };
     [[NSNotificationCenter defaultCenter] postNotificationName:MKMQTTServerReceivedResetFactoryNotification
+                                                        object:nil
+                                                      userInfo:@{@"userInfo" : dataDic}];
+}
+
+- (void)parseLEDSetting:(NSData *)topicData topic:(NSString *)topic{
+    NSString *deviceID = [self fetchDeviceID:topicData];
+    if (!ValidStr(deviceID)) {
+        return;
+    }
+    NSDictionary *lenDic = [self fetchDeviceIDLenAndDataLen:topicData];
+    NSInteger dataLen = [lenDic[@"dataLen"] integerValue];
+    NSInteger index = [lenDic[@"index"] integerValue];
+    NSData *statusData = [topicData subdataWithRange:NSMakeRange(index, dataLen)];
+    NSString *tempData = [MKMQTTSDKAdopter hexStringFromData:statusData];
+    
+    NSDictionary *dataDic = @{
+        @"function":mk_deviceLEDSettingKey,
+        @"id":deviceID,
+        @"deviceTopic":topic,
+        @"data":@{
+                @"serverConnectingIson":@([[tempData substringWithRange:NSMakeRange(0, 2)] isEqualToString:@"01"]),
+                @"serverConnectedIson":@([[tempData substringWithRange:NSMakeRange(2, 2)] isEqualToString:@"01"]),
+                @"bleBroadcastIson":@([[tempData substringWithRange:NSMakeRange(4, 2)] isEqualToString:@"01"]),
+                @"bleConnectingIson":@([[tempData substringWithRange:NSMakeRange(6, 2)] isEqualToString:@"01"]),
+        },
+    };
+    [[NSNotificationCenter defaultCenter] postNotificationName:MKMQTTServerReceivedLEDSettingNotification
+                                                        object:nil
+                                                      userInfo:@{@"userInfo" : dataDic}];
+}
+
+- (void)parseRawDataFilterConditions:(NSData *)topicData topic:(NSString *)topic {
+    NSString *deviceID = [self fetchDeviceID:topicData];
+    if (!ValidStr(deviceID)) {
+        return;
+    }
+    NSDictionary *lenDic = [self fetchDeviceIDLenAndDataLen:topicData];
+    NSInteger dataLen = [lenDic[@"dataLen"] integerValue];
+    if (dataLen == 0) {
+        //过滤规则为空
+        NSDictionary *dataDic = @{
+            @"function":mk_deviceRawFilterKey,
+            @"id":deviceID,
+            @"deviceTopic":topic,
+            @"data":@{
+                    @"filterList":@[]
+            },
+        };
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKMQTTServerReceivedRawFilterNotification
+                                                            object:nil
+                                                          userInfo:@{@"userInfo" : dataDic}];
+        return;
+    }
+    NSInteger index = [lenDic[@"index"] integerValue];
+    NSData *statusData = [topicData subdataWithRange:NSMakeRange(index, dataLen)];
+    NSString *tempData = [MKMQTTSDKAdopter hexStringFromData:statusData];
+    NSInteger subIndex = 0;
+    NSMutableArray *filterList = [NSMutableArray array];
+    //最多五条过滤数据
+    for (NSInteger i = 0; i < 5; i ++) {
+        NSInteger index0Len = [MKMQTTSDKAdopter decimalWithHex:tempData range:NSMakeRange(subIndex, 2)];
+        NSString *index0Data = [tempData substringWithRange:NSMakeRange(subIndex + 2, index0Len * 2)];
+        
+        NSDictionary *index0Dic = @{
+            @"dataType":[index0Data substringWithRange:NSMakeRange(0, 2)],
+            @"minIndex":[MKMQTTSDKAdopter decimalStringWithHex:index0Data range:NSMakeRange(2, 2)],
+            @"maxIndex":[MKMQTTSDKAdopter decimalStringWithHex:index0Data range:NSMakeRange(4, 2)],
+            @"rawData":[index0Data substringFromIndex:6],
+            @"index":@(i),
+        };
+        [filterList addObject:index0Dic];
+        subIndex += (index0Data.length + 2);
+        if (subIndex >= tempData.length) {
+            break;
+        }
+    }
+    NSDictionary *dataDic = @{
+        @"function":mk_deviceRawFilterKey,
+        @"id":deviceID,
+        @"deviceTopic":topic,
+        @"data":@{
+                @"filterList":filterList
+        },
+    };
+    [[NSNotificationCenter defaultCenter] postNotificationName:MKMQTTServerReceivedRawFilterNotification
+                                                        object:nil
+                                                      userInfo:@{@"userInfo" : dataDic}];
+}
+
+- (void)parseMacFilter:(NSData *)topicData topic:(NSString *)topic {
+    NSString *deviceID = [self fetchDeviceID:topicData];
+    if (!ValidStr(deviceID)) {
+        return;
+    }
+    NSDictionary *lenDic = [self fetchDeviceIDLenAndDataLen:topicData];
+    NSInteger dataLen = [lenDic[@"dataLen"] integerValue];
+    NSInteger index = [lenDic[@"index"] integerValue];
+    NSData *statusData = [topicData subdataWithRange:NSMakeRange(index, dataLen)];
+    NSString *tempData = [MKMQTTSDKAdopter hexStringFromData:statusData];
+    NSDictionary *dataDic = @{
+        @"function":mk_deviceMacFilterKey,
+        @"id":deviceID,
+        @"deviceTopic":topic,
+        @"data":@{
+                @"macFilter":SafeStr(tempData),
+        },
+    };
+    [[NSNotificationCenter defaultCenter] postNotificationName:MKMQTTServerReceivedMacFilterNotification
+                                                        object:nil
+                                                      userInfo:@{@"userInfo" : dataDic}];
+}
+
+- (void)parseDataReportTime:(NSData *)topicData topic:(NSString *)topic{
+    NSString *deviceID = [self fetchDeviceID:topicData];
+    if (!ValidStr(deviceID)) {
+        return;
+    }
+    NSDictionary *lenDic = [self fetchDeviceIDLenAndDataLen:topicData];
+    NSInteger dataLen = [lenDic[@"dataLen"] integerValue];
+    NSInteger index = [lenDic[@"index"] integerValue];
+    NSString *timeValue = [MKMQTTSDKAdopter hexStringFromData:[topicData subdataWithRange:NSMakeRange(index, dataLen)]];
+    NSDictionary *dataDic = @{
+        @"function":mk_deviceDataReportTimeKey,
+        @"id":deviceID,
+        @"deviceTopic":topic,
+        @"data":@{
+                @"time":SafeStr([MKMQTTSDKAdopter decimalStringWithHex:timeValue range:NSMakeRange(0, timeValue.length)]),
+        },
+    };
+    [[NSNotificationCenter defaultCenter] postNotificationName:MKMQTTServerReceivedDataReportTimeNotification
                                                         object:nil
                                                       userInfo:@{@"userInfo" : dataDic}];
 }

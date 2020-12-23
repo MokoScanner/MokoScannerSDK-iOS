@@ -24,22 +24,18 @@ extern NSString *const mk_centralManagerStateChangedNotification;
 #pragma mark - scanDelegate
 @protocol mk_scanPeripheralDelegate <NSObject>
 /**
- Central strat scanning method.
+ 中心开始扫描
  
  */
 - (void)mk_centralStartScan;
 /**
- Central scan new.
+ 中心扫描到新的设备
  
- @param dataDic @{
- @"deviceName":(deviceName ? deviceName : @""),
- @"rssi":rssi,
- @"peripheral":peripheral
- }
+ @param dataDic dataDic
  */
 - (void)mk_centralDidDiscoverPeripheral:(NSDictionary *)dataDic;
 /**
- Central stop scanning.
+ 中心停止扫描
  
  */
 - (void)mk_centralStopScan;
@@ -51,77 +47,59 @@ extern NSString *const mk_centralManagerStateChangedNotification;
 @protocol mk_centralManagerStateDelegate <NSObject>
 
 /**
- Central bluetooth status change.
+ 中心蓝牙状态改变
  
- @param managerState central bluetooth status
+ @param managerState 中心蓝牙状态
  */
 - (void)mk_centralStateChanged:(mk_centralManagerState)managerState;
 
 /**
- Center and peripheral connection status change.
+ 中心与外设连接状态改变
  
- @param connectState peripheral state
+ @param connectState 外设连接状态
  */
 - (void)mk_peripheralConnectStateChanged:(mk_peripheralConnectStatus)connectState;
 
 @end
 
-@class CBPeripheral, CBCentralManager, CBCharacteristic, MKBLETaskOperation;
-
+@class CBPeripheral;
+@class CBCentralManager;
+@class CBCharacteristic;
+@class MKBLETaskOperation;
 @interface MKScannerCentralManager : NSObject
 
-/// centralManager
 @property (nonatomic, strong, readonly)CBCentralManager *centralManager;
 
-/// Current connected device.
 @property (nonatomic, strong, readonly)CBPeripheral *peripheral;
 
-/// Current connection status.
 @property (nonatomic, assign, readonly)mk_peripheralConnectStatus connectStatus;
 
-/// Current bluetooth status.
 @property (nonatomic, assign, readonly)mk_centralManagerState centralStatus;
 
-/// Scan delegate.
 @property (nonatomic, weak)id <mk_scanPeripheralDelegate>scanDelegate;
 
-/// Central status delegate.
 @property (nonatomic, weak)id <mk_centralManagerStateDelegate>stateDelegate;
 
 + (MKScannerCentralManager *)shared;
 + (void)attempDealloc;
 
 #pragma mark - method
-
 - (BOOL)scanDevice;
-
 - (void)stopScan;
-
-- (void)connectPeripheral:(nonnull CBPeripheral *)peripheral
+- (void)connectPeripheral:(CBPeripheral *)peripheral
                  sucBlock:(mk_connectSuccessBlock)sucBlock
               failedBlock:(mk_connectFailedBlock)failedBlock;
 - (void)disconnectPeripheral;
 
-/// Add a communication task (app-->peripheral) to the queue.
-/// @param operationID Task ID.
-/// @param characteristic Characteristics used in communication.
-/// @param resetNum Is it necessary to return the total number of communication data by the peripheral.
-/// @param commandData Communication data.
-/// @param successBlock success callback
-/// @param failureBlock failed callback
 - (void)addTaskWithTaskID:(mk_taskOperationID)operationID
-           characteristic:(nonnull CBCharacteristic *)characteristic
+           characteristic:(CBCharacteristic *)characteristic
                  resetNum:(BOOL)resetNum
-              commandData:(nonnull NSString *)commandData
+              commandData:(NSString *)commandData
              successBlock:(mk_communicationSuccessBlock)successBlock
              failureBlock:(mk_communicationFailedBlock)failureBlock;
-- (void)addTask:(nonnull MKBLETaskOperation *)task;
-
-/// Send data to peripheral
-/// @param commandData data
-/// @param characteristic Characteristics used in communication.
-- (void)sendCommandToPeripheral:(nonnull NSString *)commandData
-                 characteristic:(nonnull CBCharacteristic *)characteristic;
+- (void)addTask:(MKBLETaskOperation *)task;
+- (void)sendCommandToPeripheral:(NSString *)commandData
+                 characteristic:(CBCharacteristic *)characteristic;
 
 @end
 

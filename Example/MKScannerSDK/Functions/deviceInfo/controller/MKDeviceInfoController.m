@@ -15,6 +15,8 @@
 #import "MKDeviceInformationController.h"
 #import "MKUpdateFirmwareController.h"
 #import "MKDeviceServerController.h"
+#import "MKLEDSettingController.h"
+#import "MKDataReportSettingController.h"
 
 @interface MKDeviceInfoController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -77,8 +79,19 @@
         return;
     }
     if (indexPath.row == 3) {
-        //开关上电默认状态
         MKDeviceServerController *vc = [[MKDeviceServerController alloc] init];
+        vc.deviceModel = self.deviceModel;
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
+    if (indexPath.row == 4) {
+        MKLEDSettingController *vc = [[MKLEDSettingController alloc] init];
+        vc.deviceModel = self.deviceModel;
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
+    if (indexPath.row == 5) {
+        MKDataReportSettingController *vc = [[MKDataReportSettingController alloc] init];
         vc.deviceModel = self.deviceModel;
         [self.navigationController pushViewController:vc animated:YES];
         return;
@@ -206,6 +219,14 @@
     MKDeviceInfoModel *mqttModel = [[MKDeviceInfoModel alloc] init];
     mqttModel.leftMsg = @"MQTT settings for device";
     [self.dataList addObject:mqttModel];
+    
+    MKDeviceInfoModel *ledSettingModel = [[MKDeviceInfoModel alloc] init];
+    ledSettingModel.leftMsg = @"LED Settings";
+    [self.dataList addObject:ledSettingModel];
+    
+    MKDeviceInfoModel *dataReportSettingModel = [[MKDeviceInfoModel alloc] init];
+    dataReportSettingModel.leftMsg = @"Data Report Setting";
+    [self.dataList addObject:dataReportSettingModel];
     
     [self.tableView reloadData];
 }

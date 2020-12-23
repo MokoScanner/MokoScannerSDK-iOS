@@ -94,7 +94,7 @@ static dispatch_once_t onceToken;
 #pragma mark - CBCentralManagerDelegate
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central{
     mk_centralManagerState managerState = mk_centralManagerStateUnable;
-    if (central.state == CBCentralManagerStatePoweredOn) {
+    if (central.state == CBManagerStatePoweredOn) {
         managerState = mk_centralManagerStateEnable;
     }
     self.centralStatus = managerState;
@@ -104,7 +104,7 @@ static dispatch_once_t onceToken;
             [self.stateDelegate mk_centralStateChanged:managerState];
         }
     });
-    if (central.state == CBCentralManagerStatePoweredOn) {
+    if (central.state == CBManagerStatePoweredOn) {
         return;
     }
     if (self.peripheral) {
@@ -242,7 +242,7 @@ static dispatch_once_t onceToken;
     if (self.isConnecting) {
         return NO;
     }
-    if (self.centralManager.state != CBCentralManagerStatePoweredOn) {
+    if (self.centralManager.state != CBManagerStatePoweredOn) {
         //蓝牙状态不可用
         return NO;
     }
@@ -285,7 +285,7 @@ static dispatch_once_t onceToken;
         [MKBLESDKAdopter operationConnectFailedBlock:failedBlock];
         return;
     }
-    if (self.centralManager.state != CBCentralManagerStatePoweredOn) {
+    if (self.centralManager.state != CBManagerStatePoweredOn) {
         //蓝牙状态不可用
         self.isConnecting = NO;
         [MKBLESDKAdopter operationCentralBlePowerOffBlock:failedBlock];
@@ -309,7 +309,7 @@ static dispatch_once_t onceToken;
 }
 
 - (void)disconnectPeripheral{
-    if (!self.peripheral || self.centralManager.state != CBCentralManagerStatePoweredOn) {
+    if (!self.peripheral || self.centralManager.state != CBManagerStatePoweredOn) {
         return;
     }
     [self.peripheral setNil];

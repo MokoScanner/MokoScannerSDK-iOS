@@ -53,7 +53,8 @@ static CGFloat const aboutIconHeight = 110.f;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 3) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://doc.mokotechnology.com/index.php?s=/Home/Item/show/item_id/2"]];
+        [self openWebBrowser];
+        return;
     }
 }
 
@@ -109,8 +110,8 @@ static CGFloat const aboutIconHeight = 110.f;
     
     MKAboutCellModel *linkModel = [[MKAboutCellModel alloc] init];
     linkModel.iconName = @"about_shouceIcon";
-    linkModel.typeMessage = @"Manual";
-    linkModel.value = @"http://doc.mokotechnology.com/index.php?s=/Home/Item/show/item_id/2";
+    linkModel.typeMessage = @"Website";
+    linkModel.value = @"www.mokosmart.com";
     linkModel.canAdit = YES;
     [self.dataList addObject:linkModel];
     
@@ -119,7 +120,9 @@ static CGFloat const aboutIconHeight = 110.f;
 
 #pragma mark - Private method
 - (void)openWebBrowser{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.mokosmart.com"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.mokosmart.com"]
+                                       options:@{}
+                             completionHandler:nil];
 }
 
 #pragma mark - setter & getter
@@ -221,19 +224,19 @@ static CGFloat const aboutIconHeight = 110.f;
 - (UIView *)tableFooter {
     UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 150.f)];
     footer.backgroundColor = RGBCOLOR(239, 239, 239);
-    [footer addSubview:self.companyNetLabel];
+//    [footer addSubview:self.companyNetLabel];
     [footer addSubview:self.companyNameLabel];
     
-    [self.companyNetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(0);
-        make.right.mas_equalTo(0);
-        make.bottom.mas_equalTo(-40);
-        make.height.mas_equalTo(MKFont(16).lineHeight);
-    }];
+//    [self.companyNetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(0);
+//        make.right.mas_equalTo(0);
+//        make.bottom.mas_equalTo(-40);
+//        make.height.mas_equalTo(MKFont(16).lineHeight);
+//    }];
     [self.companyNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(0);
         make.right.mas_equalTo(0);
-        make.bottom.mas_equalTo(self.companyNetLabel.mas_top).mas_offset(-17);
+        make.top.mas_equalTo(30.f);
         make.height.mas_equalTo(MKFont(17).lineHeight);
     }];
     

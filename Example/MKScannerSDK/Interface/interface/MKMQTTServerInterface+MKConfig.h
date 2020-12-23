@@ -8,6 +8,8 @@
 
 #import "MKMQTTServerInterface.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, MKUpdateFileType) {
     MKUpdateFirmware,
     MKUpdateCAFile,
@@ -15,7 +17,30 @@ typedef NS_ENUM(NSInteger, MKUpdateFileType) {
     MKUpdateClientPrivateKey,
 };
 
-NS_ASSUME_NONNULL_BEGIN
+@protocol MKLEDSettingProtocol <NSObject>
+
+@property (nonatomic, assign)BOOL serverConnectingIson;
+
+@property (nonatomic, assign)BOOL serverConnectedIson;
+
+@property (nonatomic, assign)BOOL bleBroadcastIson;
+
+@property (nonatomic, assign)BOOL bleConnectingIson;
+
+@end
+
+@protocol MKRawFilterProtocol <NSObject>
+
+/// 参考https://www.bluetooth.com/specifications/assigned-numbers/generic-access-profile/
+@property (nonatomic, copy)NSString *dataType;
+
+@property (nonatomic, assign)NSInteger minIndex;
+
+@property (nonatomic, assign)NSInteger maxIndex;
+
+@property (nonatomic, copy)NSString *rawData;
+
+@end
 
 @interface MKMQTTServerInterface (MKConfig)
 
@@ -43,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
                         sucBlock:(void (^)(void))sucBlock
                      failedBlock:(void (^)(NSError *error))failedBlock;
 
-/// 设置设备的扫描间隔
+/// 设置设备的扫描过滤rssi
 /// @param rssi 扫描过滤rssi
 /// @param topic topic
 /// @param mqttID mqttID
@@ -55,8 +80,8 @@ NS_ASSUME_NONNULL_BEGIN
                              sucBlock:(void (^)(void))sucBlock
                           failedBlock:(void (^)(NSError *error))failedBlock;
 
-/// 设置设备的扫描间隔
-/// @param filteringName 扫描过滤名称
+/// 设置设备的扫描过滤名称
+/// @param filteringName 扫描过滤名称,1~29字符
 /// @param topic topic
 /// @param mqttID mqttID
 /// @param sucBlock Success callback
@@ -66,6 +91,55 @@ NS_ASSUME_NONNULL_BEGIN
                                mqttID:(NSString *)mqttID
                              sucBlock:(void (^)(void))sucBlock
                           failedBlock:(void (^)(NSError *error))failedBlock;
+
+
+/// 配置指示灯状态
+/// @param protocol protocol
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)configLEDSettings:(id <MKLEDSettingProtocol>)protocol
+                    topic:(NSString *)topic
+                   mqttID:(NSString *)mqttID
+                 sucBlock:(void (^)(void))sucBlock
+              failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// 配置扫描过滤的mac地址
+/// @param macAddress mac地址
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)configDeviceScanFilteringMac:(NSString *)macAddress
+                               topic:(NSString *)topic
+                              mqttID:(NSString *)mqttID
+                            sucBlock:(void (^)(void))sucBlock
+                         failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// 配置raw过滤数据规则
+/// @param conditions conditions,最多五组,如果数组里面没有条件，则认为关闭过滤
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)configRawFilterConditions:(NSArray <id <MKRawFilterProtocol>>*)conditions
+                            topic:(NSString *)topic
+                           mqttID:(NSString *)mqttID
+                         sucBlock:(void (^)(void))sucBlock
+                      failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// 设置数据超时时长
+/// @param time 0~60
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)configDeviceDataReportSettingTime:(NSInteger)time
+                                    topic:(NSString *)topic
+                                   mqttID:(NSString *)mqttID
+                                 sucBlock:(void (^)(void))sucBlock
+                              failedBlock:(void (^)(NSError *error))failedBlock;
 
 #pragma mark - update
 /**

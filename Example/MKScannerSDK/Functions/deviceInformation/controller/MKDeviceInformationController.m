@@ -92,36 +92,36 @@
         [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
         return;
     }
-    if ([deviceDic[@"function"] isEqualToString:mk_dateOfProductionKey]) {
-        //生产日期
-        MKDeviceInformationModel *dateModel = self.dataList[1];
-        dateModel.rightMsg = dataDic[@"dateOfProduction"];
+//    if ([deviceDic[@"function"] isEqualToString:mk_dateOfProductionKey]) {
+//        //生产日期
+//        MKDeviceInformationModel *dateModel = self.dataList[1];
+//        dateModel.rightMsg = dataDic[@"dateOfProduction"];
+//        [self readDataResult];
+//        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+//        return;
+//    }
+    if ([deviceDic[@"function"] isEqualToString:mk_deviceProductModeKey]) {
+        //产品型号
+        MKDeviceInformationModel *productModel = self.dataList[1];
+        productModel.rightMsg = dataDic[@"productMode"];
         [self readDataResult];
         [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
         return;
     }
-    if ([deviceDic[@"function"] isEqualToString:mk_deviceProductModeKey]) {
-        //产品型号
-        MKDeviceInformationModel *productModel = self.dataList[2];
-        productModel.rightMsg = dataDic[@"productMode"];
+    if ([deviceDic[@"function"] isEqualToString:mk_firmwareVersionKey]) {
+        //固件版本
+        MKDeviceInformationModel *firmModel = self.dataList[2];
+        firmModel.rightMsg = dataDic[@"firmware"];
         [self readDataResult];
         [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
         return;
     }
-    if ([deviceDic[@"function"] isEqualToString:mk_firmwareVersionKey]) {
-        //固件版本
-        MKDeviceInformationModel *firmModel = self.dataList[3];
-        firmModel.rightMsg = dataDic[@"firmware"];
-        [self readDataResult];
-        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:3 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-        return;
-    }
     if ([deviceDic[@"function"] isEqualToString:mk_macAddressKey]) {
         //mac地址
-        MKDeviceInformationModel *macModel = self.dataList[4];
+        MKDeviceInformationModel *macModel = self.dataList[3];
         macModel.rightMsg = dataDic[@"macAddress"];
         [self readDataResult];
-        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:4 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:3 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
         return;
     }
 }
@@ -138,14 +138,14 @@
             });
             return ;
         }
-        if (![self readDateOfProduct]) {
-            moko_dispatch_main_safe(^{
-                [[MKHudManager share] hide];
-                [self.view showCentralToast:@"Read date of product error"];
-                [self performSelector:@selector(leftButtonMethod) withObject:nil afterDelay:0.5f];
-            });
-            return ;
-        }
+//        if (![self readDateOfProduct]) {
+//            moko_dispatch_main_safe(^{
+//                [[MKHudManager share] hide];
+//                [self.view showCentralToast:@"Read date of product error"];
+//                [self performSelector:@selector(leftButtonMethod) withObject:nil afterDelay:0.5f];
+//            });
+//            return ;
+//        }
         if (![self readProductMode]) {
             moko_dispatch_main_safe(^{
                 [[MKHudManager share] hide];
@@ -310,9 +310,9 @@
     companyModel.leftMsg = @"Company Name";
     [self.dataList addObject:companyModel];
     
-    MKDeviceInformationModel *dateModel = [[MKDeviceInformationModel alloc] init];
-    dateModel.leftMsg = @"Date of Manufacture";
-    [self.dataList addObject:dateModel];
+//    MKDeviceInformationModel *dateModel = [[MKDeviceInformationModel alloc] init];
+//    dateModel.leftMsg = @"Date of Manufacture";
+//    [self.dataList addObject:dateModel];
     
     MKDeviceInformationModel *nameModel = [[MKDeviceInformationModel alloc] init];
     nameModel.leftMsg = @"Product Model";

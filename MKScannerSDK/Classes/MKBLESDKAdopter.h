@@ -14,18 +14,18 @@ NS_ASSUME_NONNULL_BEGIN
  自定义的错误码
  */
 typedef NS_ENUM(NSInteger, mk_customErrorCode){
-    mk_bluetoothDisable = -10000,                                //Current phone Bluetooth is not available.
-    mk_connectedFailed = -10001,                                 //Connection peripheral failed.
-    mk_peripheralDisconnected = -10002,                          //The currently externally connected device is disconnected.
-    mk_characteristicError = -10003,                             //Feature is empty.
-    mk_requestPeripheralDataError = -10004,                      //Requesting device data error.
-    mk_paramsError = -10005,                                     //The input parameters are incorrect.
-    mk_setParamsError = -10006,                                  //Setting parameter error.
-    mk_getPackageError = -10007,                                 //When upgrading the firmware, the firmware data passed in is
-    mk_updateError = -10008,                                     //Upgrade fail.
-    mk_deviceTypeUnknowError = -10009,                           //Device type error.
-    mk_unsupportCommandError = -10010,                           //Device do not support the command.
-    mk_deviceIsConnectingError = -10011,                         //The device is connecting and does not allow duplicate
+    mk_bluetoothDisable = -10000,                                //当前手机蓝牙不可用
+    mk_connectedFailed = -10001,                                 //连接外设失败
+    mk_peripheralDisconnected = -10002,                          //当前外部连接的设备处于断开状态
+    mk_characteristicError = -10003,                             //特征为空
+    mk_requestPeripheralDataError = -10004,                      //请求手环数据出错
+    mk_paramsError = -10005,                                     //输入的参数有误
+    mk_setParamsError = -10006,                                  //设置参数出错
+    mk_getPackageError = -10007,                                 //升级固件的时候，传过来的固件数据出错
+    mk_updateError = -10008,                                     //升级失败
+    mk_deviceTypeUnknowError = -10009,                           //设备类型错误
+    mk_unsupportCommandError = -10010,                           //设备不支持该条命令
+    mk_deviceIsConnectingError = -10011,                         //设备正在连接,不允许重复连接
 };
 
 @interface MKBLESDKAdopter : NSObject
@@ -53,6 +53,10 @@ typedef NS_ENUM(NSInteger, mk_customErrorCode){
 + (NSString *)getDecimalStringWithHex:(NSString *)content range:(NSRange)range;
 + (NSArray *)interceptionOfArray:(NSArray *)originalArray subRange:(NSRange)range;
 + (NSData *)getCrc16VerifyCode:(NSData *)data;
+
+/// 普通字符串转换成16进制字符串
+/// @param string 字符串
++ (NSString *)hexStringFromString:(NSString *)string;
 + (NSString *)hexStringFromData:(NSData *)sourceData;
 + (NSString *)getTimeStringWithDate:(NSDate *)date;
 + (NSData *)stringToData:(NSString *)dataString;

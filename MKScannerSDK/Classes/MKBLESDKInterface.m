@@ -466,14 +466,10 @@ static NSTimeInterval const defaultTimeCoefficient = 0.05;
         [MKBLESDKAdopter operationParamsErrorBlock:failedBlock];
         return;
     }
-    NSString *tempString = @"";
-    for (NSInteger i = 0; i < wifiSSID.length; i ++) {
-        int asciiCode = [wifiSSID characterAtIndex:i];
-        tempString = [tempString stringByAppendingString:[NSString stringWithFormat:@"%1lx",(unsigned long)asciiCode]];
-    }
+    NSString *tempString = [MKBLESDKAdopter hexStringFromString:wifiSSID];
     dispatch_queue_t queue = dispatch_queue_create("configWifiSSIDQueue", 0);
     dispatch_async(queue, ^{
-        if (![self configTotalNumber:wifiSSID.length key:@"8b" taskID:mk_configWifiSSIDNumberOperation]) {
+        if (![self configTotalNumber:(tempString.length / 2) key:@"8b" taskID:mk_configWifiSSIDNumberOperation]) {
             [MKBLESDKAdopter operationSetParamsErrorBlock:failedBlock];
             return ;
         }
@@ -495,7 +491,7 @@ static NSTimeInterval const defaultTimeCoefficient = 0.05;
 + (void)configWifiPassword:(NSString *)password
                   sucBlock:(mk_communicationSuccessBlock)sucBlock
                failedBlock:(mk_communicationFailedBlock)failedBlock {
-    if (!password || password.length > 100) {
+    if (!mk_validStr(password) || password.length > 100) {
         [MKBLESDKAdopter operationParamsErrorBlock:failedBlock];
         return;
     }

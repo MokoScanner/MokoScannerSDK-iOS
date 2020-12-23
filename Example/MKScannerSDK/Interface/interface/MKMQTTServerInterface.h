@@ -126,4 +126,44 @@
                        sucBlock:(void (^)(void))sucBlock
                     failedBlock:(void (^)(NSError *error))failedBlock;
 
+/// 读取设备的LED设置
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)readDeviceLEDSettingWithTopic:(NSString *)topic
+                               mqttID:(NSString *)mqttID
+                             sucBlock:(void (^)(void))sucBlock
+                          failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// 读取过滤蓝牙原始数据规则
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)readDeviceRawFilterDataWithTopic:(NSString *)topic
+                                  mqttID:(NSString *)mqttID
+                                sucBlock:(void (^)(void))sucBlock
+                             failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// 读取过滤蓝牙mac地址
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)readDeviceMacFilterDataWithTopic:(NSString *)topic
+                                  mqttID:(NSString *)mqttID
+                                sucBlock:(void (^)(void))sucBlock
+                             failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// 读取数据超时时长
+/// @param topic topic
+/// @param mqttID mqttID
+/// @param sucBlock Success callback
+/// @param failedBlock Failed callback
++ (void)readDeviceDataReportSettingTimeWithTopic:(NSString *)topic
+                                          mqttID:(NSString *)mqttID
+                                        sucBlock:(void (^)(void))sucBlock
+                                     failedBlock:(void (^)(NSError *error))failedBlock;
+
 @end

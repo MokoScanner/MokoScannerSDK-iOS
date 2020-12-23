@@ -12,7 +12,7 @@
 #import "MKDeviceMainPageIntervalView.h"
 
 #import "MKDeviceInfoController.h"
-#import "MKEditFilterController.h"
+#import "MKFilterConditionsController.h"
 
 #import "MKDeviceDataBaseManager.h"
 
@@ -198,7 +198,7 @@
 
 #pragma mark - event method
 - (void)editFilterButtonPressed {
-    MKEditFilterController *vc = [[MKEditFilterController alloc] init];
+    MKFilterConditionsController *vc = [[MKFilterConditionsController alloc] init];
     vc.deviceModel = self.deviceModel;
     [self.navigationController pushViewController:vc animated:YES];
 }
